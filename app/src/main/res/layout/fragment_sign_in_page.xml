@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background"
+        tools:context=".presentation.fragments.SignInPageFragment"
+        tools:ignore="SmallSp">
+
+        <TextView
+            android:id="@+id/text_view_sign_in"
+            style="@style/TextViewTitle"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="121dp"
+            android:text="@string/sign_in_page_title"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_first_name_fragment_sign_in"
+            style="@style/EditTextField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:hint="@string/sign_in_fragment_first_name_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_sign_in" />
+
+        <TextView
+            android:id="@+id/text_view_first_name_fragment_sign_in_page_error"
+            style="@style/EditTextInputError"
+            app:layout_constraintEnd_toEndOf="@id/edit_text_first_name_fragment_sign_in"
+            app:layout_constraintStart_toStartOf="@id/edit_text_first_name_fragment_sign_in"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_first_name_fragment_sign_in" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_last_name"
+            style="@style/EditTextField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:hint="@string/sign_in_fragment_last_name_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_first_name_fragment_sign_in" />
+
+        <TextView
+            android:id="@+id/text_view_last_name_error"
+            style="@style/EditTextInputError"
+            app:layout_constraintEnd_toEndOf="@id/edit_text_last_name"
+            app:layout_constraintStart_toStartOf="@id/edit_text_last_name"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_last_name" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_email"
+            style="@style/EditTextField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:hint="@string/sign_in_fragment_email_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_last_name" />
+
+        <TextView
+            android:id="@+id/text_view_email_error"
+            style="@style/EditTextInputError"
+            android:text="@string/email_field_error"
+            app:layout_constraintEnd_toEndOf="@id/edit_text_email"
+            app:layout_constraintStart_toStartOf="@id/edit_text_email"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_email" />
+
+
+        <Button
+            android:id="@+id/button_sign_in"
+            android:layout_width="289dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/button_custom_blue"
+            android:fontFamily="@font/montserrat"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/sign_in_page_title"
+            android:textColor="@color/text_on_button_white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_email"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/text_view_already_have_an_account"
+            android:layout_width="129dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/sign_in_fragment_already_have_an_account"
+            android:textColor="@color/text_on_background_grey"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@id/button_sign_in"
+            app:layout_constraintTop_toBottomOf="@id/button_sign_in" />
+
+        <TextView
+            android:id="@+id/text_view_log_in"
+            android:layout_width="35dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/sign_in_fragment_log_in"
+            android:textAlignment="center"
+            android:textColor="@color/text_reference_blue"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@id/text_view_already_have_an_account"
+            app:layout_constraintTop_toBottomOf="@id/button_sign_in" />
+
+        <TextView
+            android:id="@+id/text_view_sign_in_with_google"
+            android:layout_width="117dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="76dp"
+            android:fontFamily="@font/montserrat"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/sign_in_fragment_sign_in_with_google"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_log_in" />
+
+
+        <ImageView
+            android:id="@+id/image_view_google_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="71dp"
+            android:layout_marginEnd="11.17dp"
+            android:contentDescription="@string/sign_in_fragment_google_icon_description"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_google_logo"
+            app:layout_constraintEnd_toStartOf="@id/text_view_sign_in_with_google"
+            app:layout_constraintTop_toBottomOf="@id/text_view_already_have_an_account" />
+
+        <TextView
+            android:id="@+id/text_view_sign_in_with_apple"
+            android:layout_width="117dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="42dp"
+            android:fontFamily="@font/montserrat"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/sign_in_fragment_sign_in_with_apple"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_sign_in_with_google" />
+
+        <ImageView
+            android:id="@+id/image_view_apple_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="39.5dp"
+            android:layout_marginEnd="13.62dp"
+            android:contentDescription="@string/sign_in_fragment_apple_icon_description"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_apple_logo"
+            app:layout_constraintEnd_toStartOf="@id/text_view_sign_in_with_apple"
+            app:layout_constraintTop_toBottomOf="@id/text_view_sign_in_with_google" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

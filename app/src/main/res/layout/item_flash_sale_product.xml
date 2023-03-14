@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="174dp"
+        android:layout_height="221dp"
+        android:layout_marginEnd="9dp"
+        app:cardCornerRadius="11dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_view_item_flash_sale_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/image_view_the_image_of_product_description" />
+
+            <ImageButton
+                android:id="@+id/button_add_to_cart"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/ic_recycler_item_plus_large"
+                android:foreground="?actionBarItemBackground"
+                app:layout_constraintBottom_toBottomOf="@id/image_view_item_flash_sale_background"
+                app:layout_constraintEnd_toEndOf="@id/image_view_item_flash_sale_background"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/text_view_item_flash_sale_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="17dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:foreground="?actionBarItemBackground"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/image_view_item_flash_sale_background"
+                app:layout_constraintStart_toStartOf="@id/image_view_item_flash_sale_background"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/text_view_item_flash_sale_name"
+                android:layout_width="87dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toTopOf="@id/text_view_item_flash_sale_price"
+                app:layout_constraintStart_toStartOf="@id/image_view_item_flash_sale_background" />
+
+            <TextView
+                android:id="@+id/text_view_item_latest_category"
+                android:layout_width="49.58dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="6dp"
+                android:alpha="0.85"
+                android:background="@drawable/recycler_item_category"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:textColor="@color/text_category_on_item_latest"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toTopOf="@id/text_view_item_flash_sale_name"
+                app:layout_constraintStart_toStartOf="@id/image_view_item_flash_sale_background"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/text_view_item_flash_sale_discount"
+                android:layout_width="49dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/recycler_item_sale_size_background"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@id/image_view_item_flash_sale_background"
+                app:layout_constraintTop_toTopOf="@id/image_view_item_flash_sale_background"
+                tools:ignore="SmallSp" />
+
+            <ImageButton
+                android:id="@+id/button_add_to_favorite"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/ic_recycler_item_like"
+                android:foreground="?actionBarItemBackground"
+                app:layout_constraintBottom_toBottomOf="@id/image_view_item_flash_sale_background"
+                app:layout_constraintEnd_toStartOf="@id/button_add_to_cart"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/ic_recycler_item_sale_man_icon"
+                app:layout_constraintStart_toStartOf="@id/image_view_item_flash_sale_background"
+                app:layout_constraintTop_toTopOf="@id/image_view_item_flash_sale_background"
+                android:contentDescription="@string/image_view_the_icon_of_sale_product_description" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>
