@@ -1,6 +1,7 @@
 package com.example.testapplication.presentation.fragments
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Patterns
@@ -12,6 +13,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.example.testapplication.presentation.activities.DetailProductActivity
 import com.example.testapplication.R
 import com.example.testapplication.databinding.FragmentSignInPageBinding
 import com.example.testapplication.domain.User
@@ -97,8 +99,12 @@ class SignInPageFragment : Fragment() {
         binding.textViewSignInWithApple.setOnClickListener {
             findNavController().navigate(SignInPageFragmentDirections.actionSignInPageFragmentToAuthorizedActivity())
         }
-        binding.imageViewAppleIcon.setOnClickListener {
+      /*  binding.imageViewAppleIcon.setOnClickListener {
             findNavController().navigate(SignInPageFragmentDirections.actionSignInPageFragmentToAuthorizedActivity())
+        }*/
+//test:
+        binding.imageViewAppleIcon.setOnClickListener {
+            startActivity(Intent(context, DetailProductActivity::class.java))
         }
 
 
