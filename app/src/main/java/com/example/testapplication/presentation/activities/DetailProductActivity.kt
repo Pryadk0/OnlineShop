@@ -1,5 +1,6 @@
 package com.example.testapplication.presentation.activities
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
@@ -42,15 +43,17 @@ class DetailProductActivity : AppCompatActivity() {
         binding = ActivityDetailProductBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel = ViewModelProvider(this, viewModelFactory)[DetailProductViewModel::class.java]
         DarkStatusBarSetter.setStatusBarDarkIcons(this.window, this)
-
+        viewModel = ViewModelProvider(this, viewModelFactory)[DetailProductViewModel::class.java]
         viewModel.getProductDetailInfo {
             productDetailInfo = it
             initActivityViewsWithLoadedData()
             initViewPager()
             setCartControlButtonsOnClickListeners()
             setColorButtonsOnClickListeners()
+            binding.imageButtonBackDetailProductActivity.setOnClickListener {
+                startActivity(Intent(this, AuthorizedActivity::class.java))
+            }
         }
     }
 

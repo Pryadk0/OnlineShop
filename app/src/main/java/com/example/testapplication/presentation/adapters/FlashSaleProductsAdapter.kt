@@ -23,6 +23,7 @@ class FlashSaleProductsAdapter @Inject constructor(private val repository: Repos
 
     private val downloadProductImageUseCase: DownloadProductImageUseCase =
         DownloadProductImageUseCase(repository)
+    var onFlashSaleProductCLickListener: ((position: Int) -> Unit)? = null
 
     override fun onCreateViewHolder(
         parent: ViewGroup, viewType: Int
@@ -56,6 +57,12 @@ class FlashSaleProductsAdapter @Inject constructor(private val repository: Repos
 
 
     inner class FlashSaleProductsViewHolder(val binding: ItemFlashSaleProductBinding) :
-        ViewHolder(binding.root)
+        ViewHolder(binding.root) {
+        init {
+            binding.imageViewItemFlashSaleBackground.setOnClickListener {
+                onFlashSaleProductCLickListener?.invoke(adapterPosition)
+            }
+        }
+    }
 
 }
