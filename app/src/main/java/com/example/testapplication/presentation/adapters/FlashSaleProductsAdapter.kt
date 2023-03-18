@@ -42,7 +42,7 @@ class FlashSaleProductsAdapter @Inject constructor(private val repository: Repos
             textViewItemFlashSaleName.text = currentList[position].name
             textViewItemFlashSalePrice.text =
                 String.format(
-                    holder.itemView.context.getString(R.string.recycler_view_flash_sale_products_item_price),
+                    holder.itemView.context.getString(R.string.price_double_2_symbols_after_dot),
                     currentList[position].price
                 ).replace(".", ",")
             textViewItemLatestCategory.text = currentList[position].category

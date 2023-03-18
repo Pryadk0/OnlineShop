@@ -43,9 +43,9 @@
                 android:layout_marginTop="35dp"
                 android:layout_marginEnd="134dp"
                 android:fontFamily="@font/poppins_semibold"
-                android:text="$ 2,500"
                 android:textColor="@color/text_sum_on_add_to_cart_button"
-                android:textSize="8sp" />
+                android:textSize="8sp"
+                tools:ignore="SmallSp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -53,9 +53,10 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="14dp"
                 android:fontFamily="@font/poppins_medium"
-                android:text="Quantity:"
+                android:text="@string/text_viewquantity"
                 android:textColor="@color/text_on_background_grey"
-                android:textSize="9sp" />
+                android:textSize="9sp"
+                tools:ignore="SmallSp" />
 
             <ImageButton
                 android:id="@+id/image_button_quantity_minus"
@@ -207,15 +208,12 @@
                     android:layout_marginTop="35dp"
                     android:layout_marginEnd="75dp"
                     android:background="@color/app_background"
-
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/view_pager_detail_product_activity"
                     app:tabIndicatorHeight="0dp"
-
                     app:tabPaddingEnd="4dp"
                     app:tabPaddingStart="4dp">
-
 
                 </com.google.android.material.tabs.TabLayout>
 
@@ -280,7 +278,6 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="21dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="New balance Sneakers"
                     android:textColor="@color/text_title"
                     android:textSize="17sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -293,7 +290,6 @@
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="23dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="$ 22.50"
                     android:textColor="@color/text_title"
                     android:textSize="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -306,11 +302,11 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="38dp"
                     android:fontFamily="@font/poppins"
-                    android:text="Features waterproof, fire, air resistant shoes. all changed when the country of fire attacked"
                     android:textColor="@color/text_on_background_grey"
                     android:textSize="9sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/text_view_detail_product_price" />
+                    app:layout_constraintTop_toBottomOf="@id/text_view_detail_product_price"
+                    tools:ignore="SmallSp" />
 
                 <TextView
                     android:id="@+id/text_view_ratio"
@@ -319,7 +315,6 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="77dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text=" 3.9"
                     android:textColor="@color/text_title"
                     android:textSize="9sp"
                     app:drawableStartCompat="@drawable/ic_star"
@@ -333,7 +328,7 @@
                     android:layout_marginStart="2dp"
                     android:layout_marginTop="77dp"
                     android:fontFamily="@font/poppins"
-                    android:text="(4000 reviews)"
+                    android:text="@string/text_view_number_of_reviews"
                     android:textColor="@color/text_on_background_grey"
                     android:textSize="9sp"
                     app:layout_constraintStart_toEndOf="@id/text_view_ratio"
@@ -346,53 +341,113 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="13dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Color:"
+                    android:text="@string/text_view_color"
                     android:textColor="@color/text_color_title"
                     android:textSize="10sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/text_view_ratio" />
+                    app:layout_constraintTop_toBottomOf="@id/text_view_ratio"
+                    tools:ignore="SmallSp" />
+
+                <!-- <ImageView
+                     android:id="@+id/image_view_color1_selected"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="22dp"
+                     android:layout_marginTop="9dp"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/text_view_colors_title"
+                     android:src="@drawable/button_color_selected_background"
+                     />
+
+                 <androidx.cardview.widget.CardView
+                     android:id="@+id/card_view_color1"
+                     android:layout_width="34dp"
+                     android:layout_height="26dp"
+                     android:layout_marginStart="24dp"
+                     android:layout_marginTop="11dp"
+                     android:foreground="?android:attr/selectableItemBackground"
+                     app:cardCornerRadius="9dp"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@id/text_view_colors_title">
+                 </androidx.cardview.widget.CardView>-->
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/card_view_color1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="11dp"
-                    android:foreground="?android:attr/selectableItemBackground"
+                    android:id="@+id/card_view_color1_selected_state"
+                    android:layout_width="37dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="9dp"
+                    android:backgroundTint="@color/selected_color_background"
                     app:cardCornerRadius="9dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/text_view_colors_title">
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_colors_title">
 
-                    <TextView
-                        android:id="@+id/text_view_color_white"
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view_color1"
                         android:layout_width="34dp"
-                        android:layout_height="26dp" />
-
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="9dp"></androidx.cardview.widget.CardView>
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_view_color2"
-                    android:layout_width="34dp"
-                    android:layout_height="26dp"
-                    android:layout_marginStart="14dp"
-                    android:layout_marginTop="11dp"
-                    android:backgroundTint="@color/text_color_title"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardCornerRadius="9dp"
+
+                <!--<ImageView
+                    android:id="@+id/image_view_color2_selected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11.8dp"
+                    android:layout_marginTop="8.5dp"
                     app:layout_constraintStart_toEndOf="@id/card_view_color1"
-                    app:layout_constraintTop_toBottomOf="@id/text_view_colors_title" />
+                    app:layout_constraintTop_toBottomOf="@id/text_view_colors_title"
+                    android:src="@drawable/button_color_selected_background"
+                    />-->
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/card_view_color3"
-                    android:layout_width="34dp"
-                    android:layout_height="26dp"
+                    android:id="@+id/card_view_color2_selected_state"
+                    android:layout_width="37dp"
+                    android:layout_height="29dp"
                     android:layout_marginStart="14dp"
-                    android:layout_marginTop="11dp"
-                    android:backgroundTint="@color/text_color_title"
-                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_marginTop="9dp"
+                    android:backgroundTint="@color/app_background"
                     app:cardCornerRadius="9dp"
-                    app:layout_constraintStart_toEndOf="@id/card_view_color2"
-                    app:layout_constraintTop_toBottomOf="@id/text_view_colors_title" />
+                    app:layout_constraintStart_toEndOf="@id/card_view_color1_selected_state"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_colors_title">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view_color2"
+                        android:layout_width="34dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="9dp" />
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view_color3_selected_state"
+                    android:layout_width="37dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="9dp"
+                    android:backgroundTint="@color/app_background"
+                    app:cardCornerRadius="9dp"
+                    app:layout_constraintStart_toEndOf="@id/card_view_color2_selected_state"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_colors_title"
+
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view_color3"
+                        android:layout_width="34dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="9dp" />
+
+                </androidx.cardview.widget.CardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

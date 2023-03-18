@@ -8,5 +8,4 @@ data class ProductDetailInfo(
     val price: Double,
     val colors: List<String>,
     val imageUrls: List<String>
-
 )
