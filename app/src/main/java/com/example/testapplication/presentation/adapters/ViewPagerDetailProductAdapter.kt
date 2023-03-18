@@ -7,7 +7,7 @@ import com.example.testapplication.presentation.fragments.ProductImageFragment
 
 class ViewPagerDetailProductAdapter(
     fragmentActivity: FragmentActivity,
-    val imageUrls: List<String>
+    private val imageUrls: List<String>,
 ) :
     FragmentStateAdapter(fragmentActivity) {
     override fun getItemCount(): Int = 3

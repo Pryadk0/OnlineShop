@@ -1,10 +1,13 @@
 package com.example.testapplication.presentation.activities
 
-import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import com.example.testapplication.R
 import com.example.testapplication.databinding.ActivityDetailProductBinding
+import com.example.testapplication.databinding.ItemTabProductDetailImageBinding
 import com.example.testapplication.presentation.TestApplication
 import com.example.testapplication.presentation.activities.utils.DarkStatusBarSetter
 import com.example.testapplication.presentation.adapters.ViewPagerDetailProductAdapter
@@ -20,7 +23,7 @@ class DetailProductActivity : AppCompatActivity() {
         (application as TestApplication).component
     }
     private lateinit var viewPagerAdapter: ViewPagerDetailProductAdapter
-    private val imageUrlsForTabs= mutableListOf<String>()
+    private val imageUrlsForTabs = mutableListOf<String>()
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
@@ -35,7 +38,6 @@ class DetailProductActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this, viewModelFactory)[DetailProductViewModel::class.java]
         DarkStatusBarSetter.setStatusBarDarkIcons(this.window, this)
-
 
         viewModel.getProductDetailInfo {
             imageUrlsForTabs.addAll(it.imageUrls)
@@ -57,17 +59,23 @@ class DetailProductActivity : AppCompatActivity() {
                     override fun onTabReselected(tab: TabLayout.Tab?) {}
                 })
             }
+
             TabLayoutMediator(
                 binding.tabLayoutProductImages,
                 binding.viewPagerDetailProductActivity
             ) { tab, position ->
+                val customTab: ItemTabProductDetailImageBinding = DataBindingUtil.inflate(
+                    LayoutInflater.from(binding.tabLayoutProductImages.context),
+                    R.layout.item_tab_product_detail_image, binding.tabLayoutProductImages,
+                    false
+                )
                 viewModel.downloadProductImageDrawable(imageUrlsForTabs[position]) { downloadedBitmap ->
-                    runOnUiThread { tab.icon = BitmapDrawable(resources, downloadedBitmap) }
+                    runOnUiThread {
+                        customTab.imageViewTabItemProductDetail.setImageBitmap(downloadedBitmap)
+                        tab.customView = customTab.root
+                    }
                 }
             }.attach()
         }
-
     }
-
-
 }
