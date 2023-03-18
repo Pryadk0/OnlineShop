@@ -37,15 +37,6 @@ class DetailProductActivity : AppCompatActivity() {
         DarkStatusBarSetter.setStatusBarDarkIcons(this.window, this)
 
 
-        /*viewModel.getProductDetailInfo {
-            imageUrlsForTabs.addAll(it.imageUrls)
-            imageUrlsForTabs.forEach { url ->
-                viewModel.downloadProductImageDrawable(url) { bitmap ->
-                    imagesForTabs.add(BitmapDrawable(resources, bitmap))
-                }
-            }*/
-
-
         viewModel.getProductDetailInfo {
             imageUrlsForTabs.addAll(it.imageUrls)
             viewPagerAdapter = ViewPagerDetailProductAdapter(this, it.imageUrls)

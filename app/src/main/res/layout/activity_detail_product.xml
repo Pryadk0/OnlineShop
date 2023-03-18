@@ -25,10 +25,10 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="19dp"
                 android:layout_marginEnd="23dp"
-                android:foreground="?actionBarItemBackground"
                 android:background="@drawable/button_add_to_cart_background"
                 android:elevation="2dp"
                 android:fontFamily="@font/poppins_semibold"
+                android:foreground="?actionBarItemBackground"
                 android:paddingStart="90dp"
                 android:text="@string/button_add_to_cart"
                 android:textSize="8sp"
@@ -63,8 +63,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="38dp"
-                android:foreground="?actionBarItemBackground"
                 android:background="@drawable/ic_button_minus"
+                android:foreground="?actionBarItemBackground"
                 tools:ignore="ContentDescription" />
 
             <ImageButton
@@ -73,8 +73,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="83dp"
                 android:layout_marginTop="38dp"
-                android:foreground="?actionBarItemBackground"
                 android:background="@drawable/ic_button_plus"
+                android:foreground="?actionBarItemBackground"
                 tools:ignore="ContentDescription" />
 
 
@@ -188,24 +188,16 @@
                 android:layout_height="wrap_content"
                 android:background="@color/app_background">
 
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_view_view_pager_detail_product_activity"
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/view_pager_detail_product_activity"
                     android:layout_width="328dp"
                     android:layout_height="279dp"
                     android:layout_marginStart="-5dp"
                     android:layout_marginTop="40dp"
                     android:background="@color/app_background"
-                    app:cardCornerRadius="9dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <androidx.viewpager2.widget.ViewPager2
-                        android:id="@+id/view_pager_detail_product_activity"
-                        android:layout_width="328dp"
-                        android:layout_height="279dp"
-                        android:background="@color/cardview_shadow_start_color" />
-                </androidx.cardview.widget.CardView>
 
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/tab_layout_product_images"
@@ -213,9 +205,10 @@
                     android:layout_height="45dp"
                     android:layout_marginTop="35dp"
                     android:background="@color/app_background"
+                    app:tabIndicatorHeight="0dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/card_view_view_pager_detail_product_activity" />
+                    app:layout_constraintTop_toBottomOf="@id/view_pager_detail_product_activity" />
 
                 <ImageButton
                     android:id="@+id/image_button_back_detail_product_activity"
@@ -239,8 +232,8 @@
                     android:elevation="1dp"
                     android:src="@drawable/group_buttons_background"
                     android:translationZ="1dp"
-                    app:layout_constraintBottom_toBottomOf="@id/card_view_view_pager_detail_product_activity"
-                    app:layout_constraintStart_toStartOf="@id/card_view_view_pager_detail_product_activity"
+                    app:layout_constraintBottom_toBottomOf="@id/view_pager_detail_product_activity"
+                    app:layout_constraintStart_toStartOf="@id/view_pager_detail_product_activity"
                     tools:ignore="ContentDescription" />
 
                 <ImageButton
@@ -249,12 +242,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="316dp"
                     android:layout_marginBottom="93dp"
-                    android:foreground="?actionBarItemBackground"
                     android:background="@drawable/ic_heart_dark"
                     android:elevation="2dp"
+                    android:foreground="?actionBarItemBackground"
                     android:translationZ="2dp"
-                    app:layout_constraintBottom_toBottomOf="@id/card_view_view_pager_detail_product_activity"
-                    app:layout_constraintStart_toStartOf="@id/card_view_view_pager_detail_product_activity"
+                    app:layout_constraintBottom_toBottomOf="@id/view_pager_detail_product_activity"
+                    app:layout_constraintStart_toStartOf="@id/view_pager_detail_product_activity"
                     tools:ignore="ContentDescription" />
 
                 <ImageButton
@@ -263,12 +256,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="316dp"
                     android:layout_marginBottom="45dp"
-                    android:foreground="?actionBarItemBackground"
                     android:background="@drawable/ic_share"
                     android:elevation="2dp"
+                    android:foreground="?actionBarItemBackground"
                     android:translationZ="2dp"
-                    app:layout_constraintBottom_toBottomOf="@id/card_view_view_pager_detail_product_activity"
-                    app:layout_constraintStart_toStartOf="@id/card_view_view_pager_detail_product_activity"
+                    app:layout_constraintBottom_toBottomOf="@id/view_pager_detail_product_activity"
+                    app:layout_constraintStart_toStartOf="@id/view_pager_detail_product_activity"
                     tools:ignore="ContentDescription" />
 
                 <TextView
