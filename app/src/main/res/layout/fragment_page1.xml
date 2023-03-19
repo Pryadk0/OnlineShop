@@ -44,12 +44,12 @@
                         android:id="@+id/image_view_toolbar_title_profile1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:contentDescription="@string/image_view_title_application_logo_description"
                         android:src="@drawable/toolbar_text_trade_by_bata"
                         app:layout_constraintBottom_toBottomOf="@+id/toolbar_fragment_page1"
                         app:layout_constraintEnd_toEndOf="@+id/toolbar_fragment_page1"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/image_view_title_application_logo_description" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/shapeable_image_view_avatar_background_page1"
@@ -91,17 +91,15 @@
 
             </com.google.android.material.appbar.AppBarLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text_search_fragment_page1"
+            <AutoCompleteTextView
+                android:id="@+id/auto_completable_text_view_search_fragment_page1"
                 style="@style/EditTextField"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="9dp"
-
+                android:hint="@string/text_view_hint_what_are_you_looking_for"
                 android:imeOptions="actionSearch"
                 android:inputType="text"
-
-                android:hint="@string/text_view_hint_what_are_you_looking_for"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/appbar_fragment_page1" />
@@ -111,9 +109,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/ic_search"
-                app:layout_constraintBottom_toBottomOf="@id/edit_text_search_fragment_page1"
-                app:layout_constraintEnd_toEndOf="@id/edit_text_search_fragment_page1"
-                app:layout_constraintTop_toTopOf="@id/edit_text_search_fragment_page1" />
+                app:layout_constraintBottom_toBottomOf="@id/auto_completable_text_view_search_fragment_page1"
+                app:layout_constraintEnd_toEndOf="@id/auto_completable_text_view_search_fragment_page1"
+                app:layout_constraintTop_toTopOf="@id/auto_completable_text_view_search_fragment_page1"
+                tools:ignore="ContentDescription" />
 
             <HorizontalScrollView
                 android:id="@+id/scroll_view_categories_fragment_page1"
@@ -123,7 +122,7 @@
                 android:layout_marginTop="17dp"
                 android:layout_marginEnd="15dp"
                 android:scrollbars="none"
-                app:layout_constraintTop_toBottomOf="@id/edit_text_search_fragment_page1">
+                app:layout_constraintTop_toBottomOf="@id/auto_completable_text_view_search_fragment_page1">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
@@ -134,10 +133,10 @@
                         android:id="@+id/image_view_category_phones"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:contentDescription="@string/image_view_phones_description"
                         android:src="@drawable/ic_phones"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/image_view_phones_description" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/text_view_phones"
@@ -152,10 +151,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="21dp"
+                        android:contentDescription="@string/image_view_headphones_description"
                         android:src="@drawable/ic_headphones"
                         app:layout_constraintStart_toEndOf="@id/image_view_category_phones"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/image_view_headphones_description" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/text_view_headphones"
@@ -170,10 +169,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="21dp"
+                        android:contentDescription="@string/image_view_games_description"
                         android:src="@drawable/ic_games"
                         app:layout_constraintStart_toEndOf="@id/image_view_category_headphones"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/image_view_games_description" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/text_view_games"
@@ -188,10 +187,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="21dp"
+                        android:contentDescription="@string/image_view_cars_description"
                         android:src="@drawable/ic_cars"
                         app:layout_constraintStart_toEndOf="@id/image_view_category_games"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/image_view_cars_description" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/text_view_cars"
@@ -206,10 +205,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="21dp"
+                        android:contentDescription="@string/image_view_furniture_description"
                         android:src="@drawable/ic_furniture"
                         app:layout_constraintStart_toEndOf="@id/image_view_category_cars"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/image_view_furniture_description" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/text_view_furniture"
@@ -224,10 +223,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="21dp"
+                        android:contentDescription="@string/image_view_kids_description"
                         android:src="@drawable/ic_kids"
                         app:layout_constraintStart_toEndOf="@id/image_view_category_furniture"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/image_view_kids_description" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/text_view_kids"
