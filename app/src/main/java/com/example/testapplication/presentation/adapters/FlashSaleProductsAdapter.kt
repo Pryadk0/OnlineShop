@@ -9,20 +9,18 @@ import com.example.testapplication.R
 import com.example.testapplication.databinding.ItemFlashSaleProductBinding
 import com.example.testapplication.domain.DownloadProductImageUseCase
 import com.example.testapplication.domain.FlashSaleProduct
-import com.example.testapplication.domain.Repository
 import javax.inject.Inject
 
-class FlashSaleProductsAdapter @Inject constructor(private val repository: Repository) :
-    ListAdapter<FlashSaleProduct, FlashSaleProductsAdapter.FlashSaleProductsViewHolder>(
-        DIFF_CALLBACK
-    ) {
+class FlashSaleProductsAdapter @Inject constructor(
+    private val downloadProductImageUseCase: DownloadProductImageUseCase
+) : ListAdapter<FlashSaleProduct, FlashSaleProductsAdapter.FlashSaleProductsViewHolder>(
+    DIFF_CALLBACK
+) {
     companion object {
         private val DIFF_CALLBACK: DiffUtil.ItemCallback<FlashSaleProduct> =
             FlashSaleProductItemDiffCallback()
     }
 
-    private val downloadProductImageUseCase: DownloadProductImageUseCase =
-        DownloadProductImageUseCase(repository)
     var onFlashSaleProductCLickListener: ((position: Int) -> Unit)? = null
 
     override fun onCreateViewHolder(
