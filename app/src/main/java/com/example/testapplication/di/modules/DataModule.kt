@@ -13,6 +13,7 @@ import com.example.testapplication.di.scopes.ApplicationScope
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import io.reactivex.disposables.CompositeDisposable
 
 @Module
 interface DataModule {
@@ -36,6 +37,9 @@ interface DataModule {
         fun provideUsersDao(context: Context): UsersDao =
             UsersDatabase.getInstance(context).usersDao()
 
+        @ApplicationScope
+        @Provides
+        fun provideCompositeDisposable(): CompositeDisposable = CompositeDisposable()
     }
 
 

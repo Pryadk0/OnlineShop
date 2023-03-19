@@ -11,7 +11,7 @@
     <string name="sign_in_fragment_last_name_hint">Last name</string>
     <string name="sign_in_fragment_email_hint">Email</string>
     <string name="recycler_view_latest_products_item_price">$ %.3f</string>
-    <string name="recycler_view_flash_sale_products_item_price">$ %.2f</string>
+    <string name="price_double_2_symbols_after_dot">$ %.2f</string>
     <string name="recycler_view_flash_sale_products_item_discount">%d%% off</string>
     <string name="edit_text_error_message">The field can\'t be empty</string>
     <string name="empty_field_error">The field can\'t be empty</string>
@@ -51,6 +51,13 @@
     <string name="button_text_1593">$ 1593</string>
     <string name="image_view_the_image_of_product_description">The image of product</string>
     <string name="image_view_the_icon_of_sale_product_description">The icon of sale product</string>
+    <string name="button_add_to_cart">ADD TO CART</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="image_view_selected_product_description">The image of selected product</string>
+    <string name="text_view_color">Color:</string>
+    <string name="text_view_number_of_reviews">(%d reviews)</string>
+    <string name="text_viewquantity">Quantity:</string>
 
 
 </resources>

@@ -9,21 +9,18 @@ import com.example.testapplication.R
 import com.example.testapplication.databinding.ItemLatestProductBinding
 import com.example.testapplication.domain.DownloadProductImageUseCase
 import com.example.testapplication.domain.LatestProduct
-import com.example.testapplication.domain.Repository
 import javax.inject.Inject
 
-class LatestProductsAdapter @Inject constructor(private val repository: Repository) :
-    ListAdapter<LatestProduct, LatestProductsAdapter.LatestProductsViewHolder>(
-        DIFF_CALLBACK
-    ) {
+class LatestProductsAdapter @Inject constructor(
+    private val downloadProductImageUseCase: DownloadProductImageUseCase,
+
+) : ListAdapter<LatestProduct, LatestProductsAdapter.LatestProductsViewHolder>(
+    DIFF_CALLBACK
+) {
     companion object {
         private val DIFF_CALLBACK: DiffUtil.ItemCallback<LatestProduct> =
             LatestProductsItemDiffCallback()
     }
-
-    private val downloadProductImageUseCase: DownloadProductImageUseCase =
-        DownloadProductImageUseCase(repository)
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LatestProductsViewHolder {
         return LatestProductsViewHolder(

@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import com.example.testapplication.di.keys.ViewModelKey
 import com.example.testapplication.presentation.viewmodels.AuthenticationViewModel
 import com.example.testapplication.presentation.viewmodels.AuthorizedViewModel
+import com.example.testapplication.presentation.viewmodels.DetailProductViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -20,6 +21,11 @@ interface ViewModelModule {
     @IntoMap
     @ViewModelKey(AuthorizedViewModel::class)
     fun bindAuthorizedViewModel(impl: AuthorizedViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(DetailProductViewModel::class)
+    fun bindDetailProductViewModel(impl: DetailProductViewModel): ViewModel
 
 
 }
