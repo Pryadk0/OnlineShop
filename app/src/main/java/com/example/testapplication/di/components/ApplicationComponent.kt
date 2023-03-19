@@ -5,9 +5,7 @@ import com.example.testapplication.di.modules.DataModule
 import com.example.testapplication.di.modules.DomainModule
 import com.example.testapplication.di.modules.ViewModelModule
 import com.example.testapplication.di.scopes.ApplicationScope
-import com.example.testapplication.presentation.fragments.LogInFragment
-import com.example.testapplication.presentation.fragments.Page1Fragment
-import com.example.testapplication.presentation.fragments.SignInPageFragment
+import com.example.testapplication.presentation.fragments.*
 import dagger.BindsInstance
 import dagger.Component
 
@@ -20,6 +18,10 @@ interface ApplicationComponent {
     fun inject(page1Fragment: Page1Fragment)
 
     fun inject(signInPageFragment: SignInPageFragment)
+
+    fun inject(productImageFragment: ProductImageFragment)
+
+    fun inject(page2Fragment: Page2Fragment)
 
     @Component.Factory
     interface Factory {

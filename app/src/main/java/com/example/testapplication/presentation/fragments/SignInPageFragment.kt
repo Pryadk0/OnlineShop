@@ -101,7 +101,6 @@ class SignInPageFragment : Fragment() {
             findNavController().navigate(SignInPageFragmentDirections.actionSignInPageFragmentToAuthorizedActivity())
         }
 
-
     }
 
     private fun handleInvalidEmail(

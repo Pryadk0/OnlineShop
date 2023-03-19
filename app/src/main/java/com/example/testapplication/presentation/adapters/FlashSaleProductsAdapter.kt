@@ -9,20 +9,19 @@ import com.example.testapplication.R
 import com.example.testapplication.databinding.ItemFlashSaleProductBinding
 import com.example.testapplication.domain.DownloadProductImageUseCase
 import com.example.testapplication.domain.FlashSaleProduct
-import com.example.testapplication.domain.Repository
 import javax.inject.Inject
 
-class FlashSaleProductsAdapter @Inject constructor(private val repository: Repository) :
-    ListAdapter<FlashSaleProduct, FlashSaleProductsAdapter.FlashSaleProductsViewHolder>(
-        DIFF_CALLBACK
-    ) {
+class FlashSaleProductsAdapter @Inject constructor(
+    private val downloadProductImageUseCase: DownloadProductImageUseCase
+) : ListAdapter<FlashSaleProduct, FlashSaleProductsAdapter.FlashSaleProductsViewHolder>(
+    DIFF_CALLBACK
+) {
     companion object {
         private val DIFF_CALLBACK: DiffUtil.ItemCallback<FlashSaleProduct> =
             FlashSaleProductItemDiffCallback()
     }
 
-    private val downloadProductImageUseCase: DownloadProductImageUseCase =
-        DownloadProductImageUseCase(repository)
+    var onFlashSaleProductCLickListener: ((position: Int) -> Unit)? = null
 
     override fun onCreateViewHolder(
         parent: ViewGroup, viewType: Int
@@ -42,7 +41,7 @@ class FlashSaleProductsAdapter @Inject constructor(private val repository: Repos
             textViewItemFlashSaleName.text = currentList[position].name
             textViewItemFlashSalePrice.text =
                 String.format(
-                    holder.itemView.context.getString(R.string.recycler_view_flash_sale_products_item_price),
+                    holder.itemView.context.getString(R.string.price_double_2_symbols_after_dot),
                     currentList[position].price
                 ).replace(".", ",")
             textViewItemLatestCategory.text = currentList[position].category
@@ -56,6 +55,12 @@ class FlashSaleProductsAdapter @Inject constructor(private val repository: Repos
 
 
     inner class FlashSaleProductsViewHolder(val binding: ItemFlashSaleProductBinding) :
-        ViewHolder(binding.root)
+        ViewHolder(binding.root) {
+        init {
+            binding.imageViewItemFlashSaleBackground.setOnClickListener {
+                onFlashSaleProductCLickListener?.invoke(adapterPosition)
+            }
+        }
+    }
 
 }
