@@ -4,14 +4,13 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
 import androidx.activity.OnBackPressedCallback
-import androidx.cardview.widget.CardView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -108,22 +107,54 @@ class Page2Fragment : Fragment() {
             tabLayoutProductImages.addOnTabSelectedListener(object :
                 TabLayout.OnTabSelectedListener {
                 override fun onTabSelected(tab: TabLayout.Tab?) {
-                    /*val cardView: CardView? = tab?.customView?.findViewById(R.id.card_view_tab_item_product_detail)
-                    cardView?.layoutParams?.height = 45
-                    cardView?.layoutParams?.width = 83*/
-                    val customTab = tab?.customView
-                    customTab?.minimumWidth = 87
-                    customTab?.minimumHeight = 59
+                    when (tab?.position) {
+                        0 -> run {
+                            val checkedInitialDrawable: Drawable? =
+                                tab.customView?.findViewById<ImageView>(R.id.image_view_tab_item_product_detail)?.drawable
+                            checkedInitialDrawable?.let {
+                                binding.imageViewTabItemProductDetailSelected1.setImageDrawable(
+                                    checkedInitialDrawable
+                                )
+                                binding.cardViewTabItemProductDetailSelected1.visibility =
+                                    View.VISIBLE
+                            }
+                        }
+                        1 -> run {
+                            val checkedInitialDrawable: Drawable? =
+                                tab.customView?.findViewById<ImageView>(R.id.image_view_tab_item_product_detail)?.drawable
+                            checkedInitialDrawable?.let {
+                                binding.imageViewTabItemProductDetailSelected2.setImageDrawable(
+                                    checkedInitialDrawable
+                                )
+                                binding.cardViewTabItemProductDetailSelected2.visibility =
+                                    View.VISIBLE
+                            }
+                        }
+                        2 -> run {
+                            val checkedInitialDrawable: Drawable? =
+                                tab.customView?.findViewById<ImageView>(R.id.image_view_tab_item_product_detail)?.drawable
+                            checkedInitialDrawable?.let {
+                                binding.imageViewTabItemProductDetailSelected3.setImageDrawable(
+                                    checkedInitialDrawable
+                                )
+                                binding.cardViewTabItemProductDetailSelected3.visibility =
+                                    View.VISIBLE
+                            }
+                        }
+                    }
+
                 }
 
                 override fun onTabUnselected(tab: TabLayout.Tab?) {
-                    /*val cardView: CardView? = tab?.customView?.findViewById(R.id.card_view_tab_item_product_detail)
-                    cardView?.layoutParams?.height = 39
-                    cardView?.layoutParams?.width = 67*/
+                    when (tab?.position) {
+                        0 -> binding.cardViewTabItemProductDetailSelected1.visibility =
+                            View.INVISIBLE
+                        1 -> binding.cardViewTabItemProductDetailSelected2.visibility =
+                            View.INVISIBLE
+                        2 -> binding.cardViewTabItemProductDetailSelected3.visibility =
+                            View.INVISIBLE
 
-                    val customTab = tab?.customView
-                    customTab?.minimumWidth = 67
-                    customTab?.minimumHeight = 39
+                    }
                 }
 
                 override fun onTabReselected(tab: TabLayout.Tab?) {}

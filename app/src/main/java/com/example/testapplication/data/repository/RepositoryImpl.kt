@@ -1,8 +1,6 @@
 package com.example.testapplication.data.repository
 
-import android.database.Observable
 import android.graphics.Bitmap
-import android.graphics.drawable.Drawable
 import android.util.Log
 import android.widget.ImageView
 import com.example.testapplication.data.datasource.local.LocalDataSource

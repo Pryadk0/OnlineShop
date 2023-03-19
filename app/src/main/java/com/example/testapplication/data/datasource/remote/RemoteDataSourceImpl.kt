@@ -1,7 +1,6 @@
 package com.example.testapplication.data.datasource.remote
 
 
-import android.annotation.SuppressLint
 import android.graphics.Bitmap
 import android.widget.ImageView
 import com.example.testapplication.data.mapper.Mapper

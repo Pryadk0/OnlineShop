@@ -34,7 +34,7 @@
                 android:text="@string/button_add_to_cart"
                 android:textSize="8sp"
                 android:translationZ="2dp"
-                tools:ignore="RtlSymmetry" />
+                tools:ignore="RtlSymmetry,SmallSp" />
 
             <TextView
                 android:id="@+id/text_view_sum_in_cart"
@@ -217,6 +217,71 @@
                     app:tabPaddingStart="4dp">
 
                 </com.google.android.material.tabs.TabLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view_tab_item_product_detail_selected_1"
+                    android:layout_width="85dp"
+                    android:layout_height="47dp"
+                    android:layout_marginStart="-5dp"
+                    android:visibility="invisible"
+                    app:cardCornerRadius="9dp"
+                    app:layout_constraintBottom_toBottomOf="@id/tab_layout_product_images"
+                    app:layout_constraintStart_toStartOf="@id/tab_layout_product_images"
+                    app:layout_constraintTop_toTopOf="@id/tab_layout_product_images">
+
+                    <ImageView
+                        android:id="@+id/image_view_tab_item_product_detail_selected_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:background="@color/selected_color_background"
+                        android:scaleType="centerCrop"
+                        tools:ignore="ContentDescription" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view_tab_item_product_detail_selected_2"
+                    android:layout_width="85dp"
+                    android:layout_height="47dp"
+                    android:visibility="invisible"
+                    app:cardCornerRadius="9dp"
+                    app:layout_constraintBottom_toBottomOf="@id/tab_layout_product_images"
+                    app:layout_constraintEnd_toEndOf="@id/tab_layout_product_images"
+                    app:layout_constraintStart_toStartOf="@id/tab_layout_product_images"
+                    app:layout_constraintTop_toTopOf="@id/tab_layout_product_images">
+
+                    <ImageView
+                        android:id="@+id/image_view_tab_item_product_detail_selected_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:background="@color/selected_color_background"
+                        android:scaleType="centerCrop"
+                        tools:ignore="ContentDescription" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view_tab_item_product_detail_selected_3"
+                    android:layout_width="85dp"
+                    android:layout_height="47dp"
+                    android:layout_marginEnd="-5dp"
+                    android:visibility="invisible"
+                    app:cardCornerRadius="9dp"
+                    app:layout_constraintBottom_toBottomOf="@id/tab_layout_product_images"
+                    app:layout_constraintEnd_toEndOf="@id/tab_layout_product_images"
+                    app:layout_constraintTop_toTopOf="@id/tab_layout_product_images">
+
+                    <ImageView
+                        android:id="@+id/image_view_tab_item_product_detail_selected_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:background="@color/selected_color_background"
+                        android:scaleType="centerCrop"
+                        tools:ignore="ContentDescription" />
+                </androidx.cardview.widget.CardView>
+
 
                 <ImageButton
                     android:id="@+id/image_button_back_fragment_page2"
