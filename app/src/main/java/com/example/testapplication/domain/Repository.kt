@@ -17,4 +17,6 @@ interface Repository {
     fun writeUserInDb(user: User)
 
     fun getProductDetailInfo(callback: (ProductDetailInfo) -> Unit)
+
+    fun getSearchWords(callback: (List<String>) -> Unit)
 }

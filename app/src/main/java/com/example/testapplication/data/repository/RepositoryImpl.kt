@@ -1,5 +1,6 @@
 package com.example.testapplication.data.repository
 
+import android.database.Observable
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
 import android.util.Log
@@ -71,6 +72,19 @@ class RepositoryImpl @Inject constructor(
             })
         disposable.let { compositeDisposable.add(disposable as Disposable) }
     }
+
+    override fun getSearchWords(callback: (List<String>) -> Unit) {
+        val disposable = remoteDataSource.getSearchWords()
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                callback(it)
+            }, {
+                Log.i(TAG, "API getSearchWords request error: ${it.message}")
+            })
+        disposable.let { compositeDisposable.add(disposable as Disposable) }
+    }
+
 
     protected fun finalize() {
         if (!compositeDisposable.isDisposed)

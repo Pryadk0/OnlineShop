@@ -8,7 +8,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.activity.OnBackPressedCallback
+import androidx.cardview.widget.CardView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -71,7 +74,6 @@ class Page2Fragment : Fragment() {
         }
     }
 
-
     private fun initActivityViewsWithLoadedData() {
         with(binding) {
             textViewDetailProductName.text = productDetailInfo.name
@@ -106,12 +108,22 @@ class Page2Fragment : Fragment() {
             tabLayoutProductImages.addOnTabSelectedListener(object :
                 TabLayout.OnTabSelectedListener {
                 override fun onTabSelected(tab: TabLayout.Tab?) {
-
-
+                    /*val cardView: CardView? = tab?.customView?.findViewById(R.id.card_view_tab_item_product_detail)
+                    cardView?.layoutParams?.height = 45
+                    cardView?.layoutParams?.width = 83*/
+                    val customTab = tab?.customView
+                    customTab?.minimumWidth = 87
+                    customTab?.minimumHeight = 59
                 }
 
                 override fun onTabUnselected(tab: TabLayout.Tab?) {
-                    /*tab?.icon?.colorFilter = null*/
+                    /*val cardView: CardView? = tab?.customView?.findViewById(R.id.card_view_tab_item_product_detail)
+                    cardView?.layoutParams?.height = 39
+                    cardView?.layoutParams?.width = 67*/
+
+                    val customTab = tab?.customView
+                    customTab?.minimumWidth = 67
+                    customTab?.minimumHeight = 39
                 }
 
                 override fun onTabReselected(tab: TabLayout.Tab?) {}

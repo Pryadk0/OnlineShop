@@ -18,4 +18,6 @@ interface RemoteDataSource {
     fun getProductDetailInfo(): Observable<ProductDetailInfo>
 
     fun downloadProductImageDrawable(imageUrl: String, callback: (Bitmap) -> Unit)
+
+    fun getSearchWords(): Observable<List<String>>
 }

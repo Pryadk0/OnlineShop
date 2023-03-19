@@ -1,8 +1,8 @@
 package com.example.testapplication.data.datasource.remote
 
 
+import android.annotation.SuppressLint
 import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
 import android.widget.ImageView
 import com.example.testapplication.data.mapper.Mapper
 import com.example.testapplication.data.network.ApiService
@@ -43,4 +43,7 @@ class RemoteDataSourceImpl @Inject constructor(
     override fun downloadProductImageDrawable(imageUrl: String, callback: (Bitmap) -> Unit) {
         Thread { callback(Picasso.get().load(imageUrl).get()) }.start()
     }
+
+    override fun getSearchWords(): Observable<List<String>> =
+        apiService.getSearchWordsResponseDto().map { it.words }
 }
