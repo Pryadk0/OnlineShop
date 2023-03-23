@@ -1,6 +1,5 @@
 package com.example.testapplication.presentation.fragments
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -57,7 +56,6 @@ class Page1Fragment : Fragment() {
         return binding.root
     }
 
-    @SuppressLint("CheckResult")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -72,13 +70,18 @@ class Page1Fragment : Fragment() {
         }
 
         viewModel = ViewModelProvider(this, viewModelFactory)[AuthorizedViewModel::class.java]
-        viewModel.getAllProducts { latestProducts, flashSaleProducts ->
-            latestProductAdapter.submitList(latestProducts)
-            flashSaleProductAdapter.submitList(flashSaleProducts)
-            flashSaleProductAdapter.onFlashSaleProductCLickListener = { _ ->
-                //get data from clicked item to open the screen with item detail info
-                startActivity(Intent(context, DetailProductActivity::class.java))
+        with(viewModel){
+            updateAllProductsLiveData()
+            latestProductsLiveData.observe(viewLifecycleOwner) {
+                latestProductAdapter.submitList(it)
             }
+            flashSaleProductLiveData.observe(viewLifecycleOwner) {
+                flashSaleProductAdapter.submitList(it)
+            }
+        }
+        flashSaleProductAdapter.onFlashSaleProductCLickListener = { _ ->
+            //get data from clicked item to open the screen with item detail info
+            startActivity(Intent(context, DetailProductActivity::class.java))
         }
 
         setAutoCompletableTextViewCompletionHints()
