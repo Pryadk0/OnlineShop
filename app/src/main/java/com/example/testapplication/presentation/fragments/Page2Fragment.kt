@@ -63,7 +63,8 @@ class Page2Fragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel = ViewModelProvider(this, viewModelFactory)[DetailProductViewModel::class.java]
-        viewModel.getProductDetailInfo {
+        viewModel.updateProductDetailInfoLiveData()
+        viewModel.productDetailInfoLiveData.observe(viewLifecycleOwner) {
             productDetailInfo = it
             initActivityViewsWithLoadedData()
             initViewPager()
