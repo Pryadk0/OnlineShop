@@ -20,7 +20,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/app_background"
-
                 android:minHeight="?attr/actionBarSize"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +55,7 @@
                 app:layout_constraintEnd_toEndOf="@id/shapeable_image_view_avatar_background_profile"
                 app:layout_constraintStart_toStartOf="@id/shapeable_image_view_avatar_background_profile"
                 app:layout_constraintTop_toTopOf="@id/shapeable_image_view_avatar_background_profile"
+                android:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/CircleImageView"
                 app:srcCompat="@drawable/avatar" />
 
