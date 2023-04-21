@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.testapplication.R
 import com.example.testapplication.databinding.FragmentLogInBinding
-import com.example.testapplication.presentation.TestApplication
+import com.example.testapplication.glue.TestApplication
 import com.example.testapplication.presentation.fragments.utils.EmptyEditTextHandler
 import com.example.testapplication.presentation.viewmodels.AuthenticationViewModel
 import com.example.testapplication.presentation.viewmodels.ViewModelFactory

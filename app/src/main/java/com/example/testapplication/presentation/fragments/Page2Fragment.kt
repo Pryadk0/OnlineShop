@@ -18,8 +18,8 @@ import com.example.testapplication.R
 import com.example.testapplication.databinding.FragmentPage2Binding
 import com.example.testapplication.databinding.ItemTabProductDetailImageBinding
 import com.example.testapplication.domain.ProductDetailInfo
-import com.example.testapplication.presentation.TestApplication
-import com.example.testapplication.presentation.activities.AuthorizedActivity
+import com.example.testapplication.glue.TestApplication
+import com.example.testapplication.glue.activities.AuthorizedActivity
 import com.example.testapplication.presentation.adapters.ViewPagerDetailProductAdapter
 import com.example.testapplication.presentation.viewmodels.DetailProductViewModel
 import com.example.testapplication.presentation.viewmodels.ViewModelFactory

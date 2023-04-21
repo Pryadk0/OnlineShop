@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import com.example.testapplication.databinding.FragmentProfileBinding
-import com.example.testapplication.presentation.activities.AuthenticationActivity
+import com.example.testapplication.glue.activities.AuthenticationActivity
 
 
 class ProfileFragment : Fragment() {

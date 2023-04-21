@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.testapplication.databinding.FragmentProductImageBinding
-import com.example.testapplication.presentation.TestApplication
+import com.example.testapplication.glue.TestApplication
 import com.example.testapplication.presentation.viewmodels.DetailProductViewModel
 import com.example.testapplication.presentation.viewmodels.ViewModelFactory
 import javax.inject.Inject

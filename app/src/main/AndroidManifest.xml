@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".presentation.TestApplication"
+        android:name=".glue.TestApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,15 +15,15 @@
         android:theme="@style/Theme.TestApplication"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.activities.DetailProductActivity"
+            android:name=".glue.activities.DetailProductActivity"
             android:exported="false"
             android:noHistory="true"/>
         <activity
-            android:name=".presentation.activities.AuthorizedActivity"
+            android:name=".glue.activities.AuthorizedActivity"
             android:exported="false"
             android:noHistory="false" />
         <activity
-            android:name=".presentation.activities.AuthenticationActivity"
+            android:name=".glue.activities.AuthenticationActivity"
             android:exported="true"
             android:noHistory="true">
             <intent-filter>

@@ -16,8 +16,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testapplication.databinding.FragmentPage1Binding
-import com.example.testapplication.presentation.TestApplication
-import com.example.testapplication.presentation.activities.DetailProductActivity
+import com.example.testapplication.glue.TestApplication
+import com.example.testapplication.glue.activities.DetailProductActivity
 import com.example.testapplication.presentation.adapters.FlashSaleProductsAdapter
 import com.example.testapplication.presentation.adapters.LatestProductsAdapter
 import com.example.testapplication.presentation.viewmodels.AuthorizedViewModel

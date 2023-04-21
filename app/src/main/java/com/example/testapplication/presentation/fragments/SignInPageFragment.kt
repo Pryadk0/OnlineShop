@@ -15,7 +15,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.testapplication.R
 import com.example.testapplication.databinding.FragmentSignInPageBinding
 import com.example.testapplication.domain.User
-import com.example.testapplication.presentation.TestApplication
+import com.example.testapplication.glue.TestApplication
 import com.example.testapplication.presentation.fragments.utils.EmptyEditTextHandler
 import com.example.testapplication.presentation.viewmodels.AuthenticationViewModel
 import com.example.testapplication.presentation.viewmodels.ViewModelFactory
