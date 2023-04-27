@@ -10,7 +10,7 @@ import androidx.core.graphics.BlendModeCompat
 import com.example.presentation.setStatusBarDarkIcons
 import com.example.testapplication.R
 import com.example.testapplication.databinding.ActivityAuthorizatedBinding
-import com.example.testapplication.presentation.adapters.ViewPagerAdapter
+import com.example.testapplication.glue.adapters.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import com.google.android.material.tabs.TabLayoutMediator

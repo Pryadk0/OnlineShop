@@ -1,14 +1,14 @@
 package com.example.testapplication.di.modules
 
 import android.content.Context
-import com.example.testapplication.data.database.UsersDao
-import com.example.testapplication.data.database.UsersDatabase
-import com.example.testapplication.data.datasource.local.LocalDataSource
-import com.example.testapplication.data.datasource.local.LocalDataSourceImpl
-import com.example.testapplication.data.datasource.remote.RemoteDataSource
-import com.example.testapplication.data.datasource.remote.RemoteDataSourceImpl
-import com.example.testapplication.data.network.ApiFactory
-import com.example.testapplication.data.network.ApiService
+import com.example.database.UsersDao
+import com.example.database.UsersDatabase
+import com.example.data.old.datasource.local.LocalDataSource
+import com.example.data.old.datasource.local.LocalDataSourceImpl
+import com.example.data.old.datasource.remote.RemoteDataSource
+import com.example.data.old.datasource.remote.RemoteDataSourceImpl
+import com.example.network.ApiFactory
+import com.example.network.ApiService
 import com.example.testapplication.di.scopes.ApplicationScope
 import dagger.Binds
 import dagger.Module
@@ -30,12 +30,12 @@ interface DataModule {
 
         @ApplicationScope
         @Provides
-        fun provideApiService(): ApiService = ApiFactory.getApiService()
+        fun provideApiService(): com.example.network.ApiService = com.example.network.ApiFactory.getApiService()
 
         @ApplicationScope
         @Provides
-        fun provideUsersDao(context: Context): UsersDao =
-            UsersDatabase.getInstance(context).usersDao()
+        fun provideUsersDao(context: Context): com.example.database.UsersDao =
+            com.example.database.UsersDatabase.getInstance(context).usersDao()
 
         @ApplicationScope
         @Provides
