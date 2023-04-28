@@ -1,6 +1,5 @@
 package com.example.network.entities
 
-import com.example.data.old.datasource.remote.model.FlashSaleProductDto
 import com.google.gson.annotations.Expose
 
 import com.google.gson.annotations.SerializedName

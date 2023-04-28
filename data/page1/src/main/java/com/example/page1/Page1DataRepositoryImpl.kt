@@ -9,10 +9,11 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import javax.inject.Inject
 
 private const val TAG = "API_REQUEST"
 
-class Page1DataRepositoryImpl(
+class Page1DataRepositoryImpl @Inject constructor(
     private val remoteDataSource: Page1RemoteDataSource,
     private val compositeDisposable: CompositeDisposable,
 ): Page1DataRepository {
