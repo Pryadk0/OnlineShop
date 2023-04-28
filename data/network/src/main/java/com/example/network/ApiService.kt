@@ -1,9 +1,10 @@
 package com.example.network
 
-import com.example.data.old.datasource.remote.model.FlashSaleProductsResponse
-import com.example.data.old.datasource.remote.model.LatestProductsResponse
-import com.example.data.old.datasource.remote.model.ProductDetailResponseDto
-import com.example.data.old.datasource.remote.model.SearchWordsResponseDto
+
+import com.example.network.entities.FlashSaleProductsResponse
+import com.example.network.entities.LatestProductsResponse
+import com.example.network.entities.ProductDetailResponseDto
+import com.example.network.entities.SearchWordsResponseDto
 import io.reactivex.Observable
 import retrofit2.http.GET
 

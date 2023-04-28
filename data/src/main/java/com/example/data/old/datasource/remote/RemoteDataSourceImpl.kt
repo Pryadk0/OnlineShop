@@ -4,10 +4,6 @@ package com.example.data.old.datasource.remote
 import android.graphics.Bitmap
 import android.widget.ImageView
 import com.example.testapplication.data.mapper.Mapper
-import com.example.network.ApiService
-import com.example.testapplication.domain.FlashSaleProduct
-import com.example.testapplication.domain.LatestProduct
-import com.example.testapplication.domain.ProductDetailInfo
 import com.squareup.picasso.Picasso
 import io.reactivex.Observable
 import javax.inject.Inject

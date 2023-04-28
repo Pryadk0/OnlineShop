@@ -1,4 +1,4 @@
-package com.example.data.old.datasource.remote.model
+package com.example.network.entities
 
 import com.example.data.old.datasource.remote.model.FlashSaleProductDto
 import com.google.gson.annotations.Expose

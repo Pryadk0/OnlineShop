@@ -1,11 +1,11 @@
-package com.example.data.old.datasource.remote.model
+package com.example.network.entities
 
 import com.google.gson.annotations.Expose
 
 import com.google.gson.annotations.SerializedName
 
 
-data class LatestProductDto(
+data class FlashSaleProductDto(
     @SerializedName("category")
     @Expose
     val category: String,
@@ -18,7 +18,11 @@ data class LatestProductDto(
     @Expose
     val price: Double,
 
+    @SerializedName("discount")
+    @Expose
+    val discount: Int,
+
     @SerializedName("image_url")
     @Expose
-    val imageUrl: String
+    val imageUrl: String,
 )

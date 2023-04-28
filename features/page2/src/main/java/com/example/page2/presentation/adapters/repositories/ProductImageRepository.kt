@@ -1,4 +1,4 @@
-package com.example.page2.domain.repositories
+package com.example.page2.presentation.adapters.repositories
 
 import android.widget.ImageView
 

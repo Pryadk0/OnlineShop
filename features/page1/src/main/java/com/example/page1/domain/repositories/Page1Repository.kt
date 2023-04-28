@@ -12,3 +12,4 @@ interface Page1Repository {
 
     fun getSearchWords(callback: (List<String>) -> Unit)
 }
+
