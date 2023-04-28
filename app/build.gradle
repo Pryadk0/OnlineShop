@@ -88,7 +88,6 @@ dependencies {
     implementation project(":core:common")
     implementation project(":core:presentation")
     implementation project(":core:theme")
-    implementation project(":data")
     implementation project(":data:database")
     implementation project(":data:network")
     implementation project(":data:authentication")

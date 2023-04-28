@@ -1,6 +1,5 @@
 package com.example.testapplication.glue.profile.di
 
-import com.example.network.ApiService
 import dagger.Component
 
 @Component(modules = [ProfileModule::class], dependencies = [ProfileComponentDependencies::class])

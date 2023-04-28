@@ -1,14 +1,10 @@
 package com.example.testapplication.di.modules
 
 import android.content.Context
-import com.example.database.UsersDao
-import com.example.database.UsersDatabase
 import com.example.data.old.datasource.local.LocalDataSource
 import com.example.data.old.datasource.local.LocalDataSourceImpl
 import com.example.data.old.datasource.remote.RemoteDataSource
 import com.example.data.old.datasource.remote.RemoteDataSourceImpl
-import com.example.network.ApiFactory
-import com.example.network.ApiService
 import com.example.testapplication.di.scopes.ApplicationScope
 import dagger.Binds
 import dagger.Module
