@@ -93,6 +93,7 @@ dependencies {
     implementation project(":data:network")
     implementation project(":data:authentication")
     implementation project(":data:page1")
+    implementation project(":data:page2")
     implementation project(":features:authentication")
     implementation project(":features:page1")
     implementation project(":features:page2")

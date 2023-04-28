@@ -38,7 +38,7 @@ class Page1DataRepositoryImpl(
             }, {
                 Log.i(TAG, "API getAllProducts request error: ${it.message}")
             })
-        disposable.let { compositeDisposable.add(it as Disposable) }
+        disposable?.let { compositeDisposable.add(it) }
     }
 
     override fun downloadProductImage(imageUrl: String, container: ImageView) =

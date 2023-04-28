@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.core.content.ContextCompat.startActivity
 import com.example.page2.Page2Router
-import com.example.testapplication.glue.activities.AuthorizedActivity
+import com.example.testapplication.presentation.activities.AuthorizedActivity
 
 class Page2RouterImpl: Page2Router {
 

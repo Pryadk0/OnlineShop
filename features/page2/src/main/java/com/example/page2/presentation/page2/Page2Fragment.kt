@@ -17,7 +17,7 @@ import com.example.page2.R
 import com.example.page2.databinding.FragmentPage2Binding
 import com.example.page2.databinding.ItemTabProductDetailImageBinding
 import com.example.page2.domain.entities.ProductDetailInfo
-import com.example.page2.presentation.adapters.ViewPagerDetailProductAdapter
+import com.example.page2.presentation.page2.adapters.ViewPagerDetailProductAdapter
 import com.example.presentation.ViewModelFactory
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator

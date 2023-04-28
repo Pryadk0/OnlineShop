@@ -1,7 +1,7 @@
 package com.example.testapplication.glue.authentication.repositories
 
 import com.example.authentication.domain.entities.User
-import com.example.authentication.domain.repositories.AuthenticationRepository
+import com.example.authentication.domain.AuthenticationRepository
 import com.example.authentication.AuthenticationDataRepository
 import com.example.testapplication.glue.authentication.mappers.AuthenticationRepositoryAdapterMapper
 import javax.inject.Inject

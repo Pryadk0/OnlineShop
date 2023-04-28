@@ -25,6 +25,6 @@
     </fragment>
     <activity
         android:id="@+id/authorizedActivity"
-        android:name="com.example.testapplication.glue.activities.AuthorizedActivity"
+        android:name="com.example.testapplication.presentation.activities.AuthorizedActivity"
         android:label="AuthorizedActivity" />
 </navigation>

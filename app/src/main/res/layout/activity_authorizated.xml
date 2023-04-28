@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/app_background"
-        tools:context=".glue.activities.AuthorizedActivity">
+        tools:context=".presentation.activities.AuthorizedActivity">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view_tab_layout"

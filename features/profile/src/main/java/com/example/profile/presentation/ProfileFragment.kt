@@ -16,7 +16,6 @@ import com.example.presentation.ViewModelFactory
 import com.example.profile.databinding.FragmentProfileBinding
 import javax.inject.Inject
 
-
 class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding: FragmentProfileBinding
@@ -67,10 +66,10 @@ class ProfileFragment : Fragment() {
         binding.shapeableImageViewAvatarProfile.setOnClickListener {
             pickImageFromGalleryLauncher.launch(
                 Intent(Intent.ACTION_PICK).setDataAndType(
-                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*"
+                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI, MEDIA_TYPE
                 )
             )
-            //to save profile photo changes implement selected photo saving in the local/remote datasource
+            //to save selected profile photo implement image saving in the local/remote datasource
         }
     }
 
@@ -82,5 +81,9 @@ class ProfileFragment : Fragment() {
     override fun onDestroy() {
         _binding = null
         super.onDestroy()
+    }
+
+    companion object {
+        private const val MEDIA_TYPE = "image/*"
     }
 }

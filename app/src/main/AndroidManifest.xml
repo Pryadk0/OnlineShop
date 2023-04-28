@@ -15,15 +15,15 @@
         android:theme="@style/Theme.TestApplication"
         tools:targetApi="31">
         <activity
-            android:name=".glue.activities.DetailProductActivity"
+            android:name=".presentation.activities.DetailProductActivity"
             android:exported="false"
             android:noHistory="true"/>
         <activity
-            android:name=".glue.activities.AuthorizedActivity"
+            android:name=".presentation.activities.AuthorizedActivity"
             android:exported="false"
             android:noHistory="false" />
         <activity
-            android:name=".glue.activities.AuthenticationActivity"
+            android:name=".presentation.activities.AuthenticationActivity"
             android:exported="true"
             android:noHistory="true">
             <intent-filter>
