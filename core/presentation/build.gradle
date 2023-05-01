@@ -6,11 +6,11 @@ plugins {
 
 android {
     namespace 'com.example.presentation'
-    compileSdk 33
+    compileSdk targetAndroidSdk
 
     defaultConfig {
-        minSdk 24
-        targetSdk 33
+        minSdk minAndroidSdk
+        targetSdk targetAndroidSdk
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -33,14 +33,14 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.10.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    //Dagger
-    implementation 'com.google.dagger:dagger:2.45'
-    kapt 'com.google.dagger:dagger-android-processor:2.15'
-    kapt 'com.google.dagger:dagger-compiler:2.45'
+    implementation Libs.Base.CoreKtx
+    implementation Libs.Base.AppCompat
+    implementation Libs.Base.Material
+    testImplementation Libs.Base.Junit
+    androidTestImplementation Libs.Base.JunitAndroidX
+    androidTestImplementation Libs.Base.Espresso
+
+    implementation Libs.Dagger2.Dagger
+    kapt Libs.Dagger2.AndroidProcessor
+    kapt Libs.Dagger2.DaggerCompiler
 }

@@ -1,5 +1,53 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
+    ext {
+
+        targetAndroidSdk = 33
+        minAndroidSdk = 24
+
+        def room_version = "2.5.1"
+
+
+        Libs = [
+                Base     : [
+                        CoreKtx            : "androidx.core:core-ktx:1.10.0",
+                        AppCompat          : "androidx.appcompat:appcompat:1.6.1",
+                        Material           : "com.google.android.material:material:1.8.0",
+                        ConstraintLayout   : "androidx.constraintlayout:constraintlayout:2.1.4",
+                        NavigationFragments: "androidx.navigation:navigation-fragment-ktx:2.5.3",
+                        NavigationUI       : "androidx.navigation:navigation-ui-ktx:2.5.3",
+                        Junit              : "junit:junit:4.13.2",
+                        JunitAndroidX      : "androidx.test.ext:junit:1.1.5",
+                        Espresso           : "androidx.test.espresso:espresso-core:3.5.1",
+                ],
+                RxJava2  : [
+                        RxAndroid: "io.reactivex.rxjava2:rxandroid:2.0.1",
+                        RxJava   : "io.reactivex.rxjava2:rxjava:2.2.9",
+                ],
+                Retrofit2: [
+                        Retrofit               : "com.squareup.retrofit2:retrofit:2.9.0",
+                        AdapterRxJava          : "com.squareup.retrofit2:adapter-rxjava:2.4.0",
+                        ConverterGson          : "com.squareup.retrofit2:converter-gson:2.4.0",
+                        Retrofit2RxJava2Adapter: "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0",
+                ],
+                Room     : [
+                        RoomRuntime : "androidx.room:room-runtime:$room_version",
+                        RoomKtx     : "androidx.room:room-ktx:$room_version",
+                        RoomCommon  : "androidx.room:room-common:$room_version",
+                        RoomPagging : "androidx.room:room-paging:$room_version",
+                        RoomCompiler: "androidx.room:room-compiler:$room_version",
+                ],
+                Picasso  : [
+                        Picasso: "com.squareup.picasso:picasso:2.71828",
+                ],
+                Dagger2  : [
+                        Dagger          : "com.google.dagger:dagger:2.45",
+                        AndroidProcessor: "com.google.dagger:dagger-android-processor:2.15",
+                        DaggerCompiler  : "com.google.dagger:dagger-compiler:2.45",
+                ],
+        ]
+    }
+
     repositories {
         google()
     }
