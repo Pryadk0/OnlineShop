@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.page2.R
 import com.example.page2.databinding.FragmentProductImageBinding
-import com.example.presentation.ViewModelFactory
+import com.example.presentation.viewmodel.ViewModelFactory
 import javax.inject.Inject
 
 private const val ARG_IMAGE_URL = "imageUrl"

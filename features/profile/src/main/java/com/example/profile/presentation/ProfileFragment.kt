@@ -12,7 +12,7 @@ import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.presentation.ViewModelFactory
+import com.example.presentation.viewmodel.ViewModelFactory
 import com.example.profile.databinding.FragmentProfileBinding
 import javax.inject.Inject
 

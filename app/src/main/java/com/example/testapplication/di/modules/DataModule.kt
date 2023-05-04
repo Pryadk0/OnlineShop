@@ -11,6 +11,7 @@ import dagger.Module
 import dagger.Provides
 import io.reactivex.disposables.CompositeDisposable
 
+/*
 @Module
 interface DataModule {
 
@@ -39,4 +40,4 @@ interface DataModule {
     }
 
 
-}
+}*/

@@ -18,7 +18,7 @@ import com.example.page1.R
 import com.example.page1.databinding.FragmentPage1Binding
 import com.example.page1.presentation.adapters.FlashSaleProductsAdapter
 import com.example.page1.presentation.adapters.LatestProductsAdapter
-import com.example.presentation.ViewModelFactory
+import com.example.presentation.viewmodel.ViewModelFactory
 import javax.inject.Inject
 
 

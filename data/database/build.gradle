@@ -45,4 +45,8 @@ dependencies {
     implementation Libs.Room.RoomCommon
     implementation Libs.Room.RoomPagging
     kapt Libs.Room.RoomCompiler
+
+    implementation Libs.Dagger2.Dagger
+    kapt Libs.Dagger2.AndroidProcessor
+    kapt Libs.Dagger2.DaggerCompiler
 }

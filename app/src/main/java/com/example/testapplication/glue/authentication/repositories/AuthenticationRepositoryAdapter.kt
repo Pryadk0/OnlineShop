@@ -14,7 +14,6 @@ class AuthenticationRepositoryAdapter @Inject constructor(
     override fun getUserFormDb(firstName: String): User? =
         mapper.mapUserDataEntityToUser(dataRepository.getUserFormDb(firstName))
 
-
     override fun writeUserInDb(user: User) {
         dataRepository.writeUserInDb(mapper.mapUserToUserDataEntity(user))
     }

@@ -4,8 +4,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.authentication.SignInRouter
 import com.example.testapplication.presentation.fragments.SignInPageFragmentDirections
+import javax.inject.Inject
 
-class SignInRouterImpl : SignInRouter {
+class SignInRouterImpl @Inject constructor() : SignInRouter {
 
     override fun startLogInScreen(fromFragment: Fragment) {
         fromFragment.findNavController()

@@ -1,35 +1,31 @@
 package com.example.testapplication.di.components
 
 import android.content.Context
-import com.example.profile.presentation.ProfileFragment
-import com.example.testapplication.di.modules.DataModule
-import com.example.testapplication.di.modules.DomainModule
-import com.example.testapplication.di.modules.ViewModelModule
-import com.example.testapplication.di.scopes.ApplicationScope
-import com.example.testapplication.glue.profile.di.ProfileComponentDependencies
-import com.example.testapplication.presentation.fragments.*
+import com.example.authentication.LogInRouter
+import com.example.authentication.SignInRouter
+import com.example.authentication.di.component.AuthenticationComponentDependencies
+import com.example.authentication.domain.AuthenticationRepository
+import com.example.database.di.DatabaseModule
+import com.example.testapplication.glue.authentication.di.AuthenticationModule
 import dagger.BindsInstance
 import dagger.Component
+import javax.inject.Singleton
 
-@ApplicationScope
+@Singleton
 @Component(
     modules = [
-        DomainModule::class,
-        DataModule::class,
-        ViewModelModule::class
+        DatabaseModule::class,
+        AuthenticationModule::class
     ]
 )
-interface ApplicationComponent: ProfileComponentDependencies {
+interface ApplicationComponent: AuthenticationComponentDependencies {
 
-    fun inject(logInFragment: LogInFragment)
+    override fun getLogInRouterImpl(): LogInRouter
 
-    fun inject(page1Fragment: Page1Fragment)
+    override fun getSignInRouterImpl(): SignInRouter
 
-    fun inject(signInPageFragment: SignInPageFragment)
+    override fun getAuthenticationRepository(): AuthenticationRepository
 
-    fun inject(productImageFragment: ProductImageFragment)
-
-    fun inject(page2Fragment: Page2Fragment)
 
     @Component.Factory
     interface ApplicationComponentFactory {

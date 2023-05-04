@@ -13,9 +13,12 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.authentication.R
 import com.example.authentication.databinding.FragmentSignInPageBinding
+import com.example.authentication.di.component.AuthenticationComponentDependencies
+import com.example.authentication.di.component.AuthenticationComponentDependenciesProvider
+import com.example.authentication.di.component.AuthenticationComponentViewModel
 import com.example.authentication.domain.entities.User
-import com.example.presentation.ViewModelFactory
 import com.example.presentation.handleEmptyText
+import com.example.presentation.viewmodel.ViewModelFactory
 import com.google.android.material.textfield.TextInputEditText
 import javax.inject.Inject
 
@@ -25,14 +28,16 @@ class SignInPageFragment : Fragment(R.layout.fragment_sign_in_page) {
     private val binding: FragmentSignInPageBinding
         get() = _binding ?: throw RuntimeException("${this.javaClass.simpleName}Binding == null")
 
-    private val component by lazy {
-        (requireActivity().application as TestApplication).component
-    }
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
 
     override fun onAttach(context: Context) {
-        component.inject(this)
+        val componentDependencies: AuthenticationComponentDependencies =
+            (context.applicationContext as AuthenticationComponentDependenciesProvider)
+                .getAuthenticationComponentDependencies()
+        ViewModelProvider(this)[AuthenticationComponentViewModel::class.java]
+            .newAuthenticationComponent(componentDependencies)
+            .injectSignInPageFragment(this)
         super.onAttach(context)
     }
 

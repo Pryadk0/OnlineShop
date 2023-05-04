@@ -4,8 +4,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.authentication.LogInRouter
 import com.example.testapplication.presentation.fragments.LogInFragmentDirections
+import javax.inject.Inject
 
-class LogInRouterImpl : LogInRouter {
+class LogInRouterImpl @Inject constructor() : LogInRouter {
 
     override fun startAuthorizedScreen(fromFragment: Fragment) =
         fromFragment.findNavController()

@@ -6,10 +6,11 @@ import com.example.testapplication.domain.Repository
 import dagger.Binds
 import dagger.Module
 
+/*
 @Module
 interface DomainModule {
 
     @ApplicationScope
     @Binds
     fun bindRepository(impl: RepositoryImpl): Repository
-}
+}*/
