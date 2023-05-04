@@ -50,4 +50,5 @@ dependencies {
     kapt Libs.Dagger2.DaggerCompiler
 
     implementation project(":core:presentation")
+    implementation project(":core:theme")
 }

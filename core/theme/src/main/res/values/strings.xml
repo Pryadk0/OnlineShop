@@ -57,7 +57,6 @@
     <string name="text_view_color">Color:</string>
     <string name="text_view_number_of_reviews">(%d reviews)</string>
     <string name="text_viewquantity">Quantity:</string>
-    <string name="exception_component_is_null">Component in %s == null</string>
 
 
 </resources>
