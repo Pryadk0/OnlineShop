@@ -15,7 +15,7 @@ import com.example.authentication.R
 import com.example.authentication.databinding.FragmentLogInBinding
 import com.example.authentication.di.component.AuthenticationComponentDependencies
 import com.example.authentication.di.component.AuthenticationComponentDependenciesProvider
-import com.example.authentication.di.component.AuthenticationComponentViewModel
+import com.example.authentication.di.component.LogInComponentViewModel
 import com.example.presentation.handleEmptyText
 import com.example.presentation.viewmodel.ViewModelFactory
 import javax.inject.Inject
@@ -33,7 +33,7 @@ class LogInFragment : Fragment(R.layout.fragment_log_in) {
         val componentDependencies: AuthenticationComponentDependencies =
             (context.applicationContext as AuthenticationComponentDependenciesProvider)
                 .getAuthenticationComponentDependencies()
-        ViewModelProvider(this)[AuthenticationComponentViewModel::class.java]
+        ViewModelProvider(this)[LogInComponentViewModel::class.java]
             .newAuthenticationComponent(componentDependencies)
             .injectLogInFragment(this)
         super.onAttach(context)

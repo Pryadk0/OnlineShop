@@ -52,7 +52,6 @@
     <string name="image_view_the_image_of_product_description">The image of product</string>
     <string name="image_view_the_icon_of_sale_product_description">The icon of sale product</string>
     <string name="button_add_to_cart">ADD TO CART</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="image_view_selected_product_description">The image of selected product</string>
     <string name="text_view_color">Color:</string>

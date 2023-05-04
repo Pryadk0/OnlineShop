@@ -16,6 +16,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.page1.R
 import com.example.page1.databinding.FragmentPage1Binding
+import com.example.page1.di.component.Page1ComponentDependencies
+import com.example.page1.di.component.Page1ComponentDependenciesProvider
+import com.example.page1.di.component.Page1ComponentViewModel
 import com.example.page1.presentation.adapters.FlashSaleProductsAdapter
 import com.example.page1.presentation.adapters.LatestProductsAdapter
 import com.example.presentation.viewmodel.ViewModelFactory
@@ -27,13 +30,10 @@ class Page1Fragment : Fragment(R.layout.fragment_page1) {
     private val binding: FragmentPage1Binding
         get() = _binding ?: throw RuntimeException("${this.javaClass.simpleName}Binding == null")
 
-    private val component by lazy {
-        (requireActivity().application as TestApplication).component
-    }
+    private lateinit var viewModel: Page1ViewModel
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
-    private lateinit var viewModel: Page1ViewModel
 
     @Inject
     lateinit var flashSaleProductAdapter: FlashSaleProductsAdapter
@@ -42,7 +42,11 @@ class Page1Fragment : Fragment(R.layout.fragment_page1) {
     lateinit var latestProductAdapter: LatestProductsAdapter
 
     override fun onAttach(context: Context) {
-        component.inject(this)
+        val componentDependencies: Page1ComponentDependencies =
+            (context.applicationContext as Page1ComponentDependenciesProvider).getPage1ComponentDependencies()
+        ViewModelProvider(this)[Page1ComponentViewModel::class.java]
+            .newPage1Component(componentDependencies)
+            .injectPage1Fragment(this)
         super.onAttach(context)
     }
 
@@ -67,7 +71,7 @@ class Page1Fragment : Fragment(R.layout.fragment_page1) {
         }
 
         viewModel = ViewModelProvider(this, viewModelFactory)[Page1ViewModel::class.java]
-        with(viewModel){
+        with(viewModel) {
             updateAllProductsLiveData()
             latestProductsLiveData.observe(viewLifecycleOwner) {
                 latestProductAdapter.submitList(it)

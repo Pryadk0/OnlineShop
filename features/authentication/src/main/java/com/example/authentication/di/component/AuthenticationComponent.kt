@@ -1,6 +1,5 @@
 package com.example.authentication.di.component
 
-import androidx.lifecycle.ViewModel
 import com.example.authentication.di.modules.AuthenticationViewModelModule
 import com.example.authentication.di.scopes.AuthenticationFeatureScope
 import com.example.authentication.presentation.login.LogInFragment

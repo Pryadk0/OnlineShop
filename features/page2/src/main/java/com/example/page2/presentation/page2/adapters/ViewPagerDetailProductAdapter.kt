@@ -9,8 +9,7 @@ import com.example.page2.presentation.productimage.ProductImageFragment
 class ViewPagerDetailProductAdapter(
     fragmentActivity: FragmentActivity,
     private val productDetailInfo: ProductDetailInfo,
-) :
-    FragmentStateAdapter(fragmentActivity) {
+) : FragmentStateAdapter(fragmentActivity) {
     override fun getItemCount(): Int = 3
 
     override fun createFragment(position: Int): Fragment {

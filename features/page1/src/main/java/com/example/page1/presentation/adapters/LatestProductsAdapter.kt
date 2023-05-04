@@ -11,11 +11,8 @@ import com.example.page1.domain.usecases.DownloadProductImageUseCase
 import javax.inject.Inject
 
 class LatestProductsAdapter @Inject constructor(
-    private val downloadProductImageUseCase: DownloadProductImageUseCase,
-
-    ) : ListAdapter<LatestProduct, LatestProductsAdapter.LatestProductsViewHolder>(
-    DIFF_CALLBACK
-) {
+    private val downloadProductImageUseCase: DownloadProductImageUseCase
+) : ListAdapter<LatestProduct, LatestProductsAdapter.LatestProductsViewHolder>(DIFF_CALLBACK) {
     companion object {
         private val DIFF_CALLBACK: DiffUtil.ItemCallback<LatestProduct> =
             LatestProductsItemDiffCallback()

@@ -15,8 +15,9 @@ private const val TAG = "API_REQUEST"
 
 class Page1DataRepositoryImpl @Inject constructor(
     private val remoteDataSource: Page1RemoteDataSource,
-    private val compositeDisposable: CompositeDisposable,
 ): Page1DataRepository {
+
+    private val compositeDisposable = CompositeDisposable()
 
     override fun getAllProducts(callback: (List<LatestProductDataEntity>, List<FlashSaleProductDataEntity>) -> Unit) {
         var latestProducts: List<LatestProductDataEntity> = mutableListOf()

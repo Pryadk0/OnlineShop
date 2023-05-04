@@ -9,6 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.page2.R
 import com.example.page2.databinding.FragmentProductImageBinding
+import com.example.page2.di.component.Page2ComponentDependencies
+import com.example.page2.di.component.Page2ComponentDependenciesProvider
+import com.example.page2.di.component.ProductImageFragmentComponentViewModel
 import com.example.presentation.viewmodel.ViewModelFactory
 import javax.inject.Inject
 
@@ -19,10 +22,6 @@ class ProductImageFragment : Fragment(R.layout.fragment_product_image) {
     private val binding: FragmentProductImageBinding
         get() = _binding ?: throw RuntimeException("${this.javaClass.simpleName}Binding == null")
 
-    private val component by lazy {
-        (requireActivity().application as TestApplication).component
-    }
-
     private var imageIrl: String? = null
 
     @Inject
@@ -30,7 +29,11 @@ class ProductImageFragment : Fragment(R.layout.fragment_product_image) {
     private lateinit var viewModel: ProductImageViewModel
 
     override fun onAttach(context: Context) {
-        component.inject(this)
+        val dependencies: Page2ComponentDependencies =
+            (context.applicationContext as Page2ComponentDependenciesProvider).getPage2ComponentDependencies()
+        ViewModelProvider(this)[ProductImageFragmentComponentViewModel::class.java]
+            .newPage2Component(dependencies)
+            .injectProductImageFragment(this)
         super.onAttach(context)
     }
 

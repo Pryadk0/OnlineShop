@@ -14,18 +14,15 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.presentation.viewmodel.ViewModelFactory
 import com.example.profile.databinding.FragmentProfileBinding
+import com.example.profile.di.component.ProfileComponentDependencies
+import com.example.profile.di.component.ProfileComponentDependenciesProvider
+import com.example.profile.di.component.ProfileComponentViewModel
 import javax.inject.Inject
 
 class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding: FragmentProfileBinding
         get() = _binding ?: throw RuntimeException("${this.javaClass.simpleName}Binding == null")
-
-    // need subComponent for Module!
-    private val component by lazy {
-        (requireActivity().application as TestApplication).component
-    }
-
 
     private var pickedImageAvatar: Uri? = null
 
@@ -38,13 +35,13 @@ class ProfileFragment : Fragment() {
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
     private lateinit var viewModel: ProfileViewModel
-    private val component by lazy {
-
-    }
 
     override fun onAttach(context: Context) {
-        val profileComponent =
-        component.inject(this)
+        val dependencies: ProfileComponentDependencies =
+            (context.applicationContext as ProfileComponentDependenciesProvider).getProfileComponentDependencies()
+        ViewModelProvider(this)[ProfileComponentViewModel::class.java]
+            .newProfileComponent(dependencies)
+            .injectProfileFragment(this)
         super.onAttach(context)
     }
 

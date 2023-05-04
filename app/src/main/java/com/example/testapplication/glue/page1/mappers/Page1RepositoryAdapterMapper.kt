@@ -4,8 +4,9 @@ import com.example.page1.domain.entities.FlashSaleProduct
 import com.example.page1.domain.entities.LatestProduct
 import com.example.page1.entities.FlashSaleProductDataEntity
 import com.example.page1.entities.LatestProductDataEntity
+import javax.inject.Inject
 
-class Page1RepositoryAdapterMapper {
+class Page1RepositoryAdapterMapper @Inject constructor() {
 
     private fun mapLatestProductDataEntityToLatestProduct(latestProductDataEntity: LatestProductDataEntity): LatestProduct =
         LatestProduct(

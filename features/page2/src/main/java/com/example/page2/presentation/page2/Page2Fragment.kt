@@ -16,6 +16,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.page2.R
 import com.example.page2.databinding.FragmentPage2Binding
 import com.example.page2.databinding.ItemTabProductDetailImageBinding
+import com.example.page2.di.component.Page2ComponentDependencies
+import com.example.page2.di.component.Page2ComponentDependenciesProvider
+import com.example.page2.di.component.Page2FragmentComponentViewModel
 import com.example.page2.domain.entities.ProductDetailInfo
 import com.example.page2.presentation.page2.adapters.ViewPagerDetailProductAdapter
 import com.example.presentation.viewmodel.ViewModelFactory
@@ -29,10 +32,6 @@ class Page2Fragment : Fragment(R.layout.fragment_page2) {
     private val binding: FragmentPage2Binding
         get() = _binding ?: throw RuntimeException("${this.javaClass.simpleName}Binding == null")
 
-    private val component by lazy {
-        (requireActivity().application as TestApplication).component
-    }
-
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
     private lateinit var viewModel: Page2ViewModel
@@ -43,7 +42,11 @@ class Page2Fragment : Fragment(R.layout.fragment_page2) {
 
 
     override fun onAttach(context: Context) {
-        component.inject(this)
+        val dependencies: Page2ComponentDependencies =
+            (context.applicationContext as Page2ComponentDependenciesProvider).getPage2ComponentDependencies()
+        ViewModelProvider(this)[Page2FragmentComponentViewModel::class.java]
+            .newPage2Component(dependencies)
+            .injectPage2Fragment(this)
         super.onAttach(context)
     }
 

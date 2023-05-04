@@ -6,7 +6,20 @@ import com.example.authentication.SignInRouter
 import com.example.authentication.di.component.AuthenticationComponentDependencies
 import com.example.authentication.domain.AuthenticationRepository
 import com.example.database.di.DatabaseModule
+import com.example.network.di.NetworkModule
+import com.example.page1.Page1Router
+import com.example.page1.di.component.Page1ComponentDependencies
+import com.example.page1.domain.Page1Repository
+import com.example.page2.Page2Router
+import com.example.page2.di.component.Page2ComponentDependencies
+import com.example.page2.domain.Page2Repository
+import com.example.page2.domain.ProductImageRepository
+import com.example.profile.ProfileRouter
+import com.example.profile.di.component.ProfileComponentDependencies
 import com.example.testapplication.glue.authentication.di.AuthenticationModule
+import com.example.testapplication.glue.page1.di.Page1Module
+import com.example.testapplication.glue.page2.di.Page2Module
+import com.example.testapplication.glue.profile.di.ProfileModule
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -15,17 +28,32 @@ import javax.inject.Singleton
 @Component(
     modules = [
         DatabaseModule::class,
-        AuthenticationModule::class
+        NetworkModule::class,
+        AuthenticationModule::class,
+        Page1Module::class,
+        Page2Module::class,
+        ProfileModule::class
     ]
 )
-interface ApplicationComponent: AuthenticationComponentDependencies {
+interface ApplicationComponent : AuthenticationComponentDependencies, Page1ComponentDependencies,
+    Page2ComponentDependencies, ProfileComponentDependencies {
 
-    override fun getLogInRouterImpl(): LogInRouter
-
-    override fun getSignInRouterImpl(): SignInRouter
-
+    //AuthenticationComponentDependencies:
+    override fun getLogInRouter(): LogInRouter
+    override fun getSignInRouter(): SignInRouter
     override fun getAuthenticationRepository(): AuthenticationRepository
 
+    //Page1ComponentDependencies:
+    override fun getPage1Router(): Page1Router
+    override fun getPage1Repository(): Page1Repository
+
+    //Page2ComponentDependencies:
+    override fun getPage2Router(): Page2Router
+    override fun getProductImageRepository(): ProductImageRepository
+    override fun getPage2Repository(): Page2Repository
+
+    //ProfileComponentDependencies
+    override fun getProfileRouter(): ProfileRouter
 
     @Component.Factory
     interface ApplicationComponentFactory {

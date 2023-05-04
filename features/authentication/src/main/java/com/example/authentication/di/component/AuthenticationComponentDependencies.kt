@@ -6,9 +6,9 @@ import com.example.authentication.domain.AuthenticationRepository
 
 interface AuthenticationComponentDependencies {
 
-    fun getLogInRouterImpl(): LogInRouter
+    fun getLogInRouter(): LogInRouter
 
-    fun getSignInRouterImpl(): SignInRouter
+    fun getSignInRouter(): SignInRouter
 
     fun getAuthenticationRepository(): AuthenticationRepository
 }

@@ -4,8 +4,9 @@ import com.example.network.entities.FlashSaleProductDto
 import com.example.network.entities.LatestProductDto
 import com.example.page1.entities.FlashSaleProductDataEntity
 import com.example.page1.entities.LatestProductDataEntity
+import javax.inject.Inject
 
-class Page1RemoteDataSourceMapper {
+class Page1RemoteDataSourceMapper @Inject constructor() {
 
     private fun mapLatestProductDtoToLatestProductDataEntity(latestProductDto: LatestProductDto) =
         LatestProductDataEntity(

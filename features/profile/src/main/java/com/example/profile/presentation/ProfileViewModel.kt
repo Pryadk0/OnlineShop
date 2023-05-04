@@ -9,8 +9,6 @@ class ProfileViewModel @Inject constructor(
     private val router: ProfileRouter
 ) : ViewModel() {
 
-    //val newProfileComponent = DaggerProfileComponent.builder().dependencies(ProfileDependenciesProvider.dependencies).build()
-
     fun startAuthenticationScreen(context: Context) =
         router.startAuthenticationScreen(context)
 

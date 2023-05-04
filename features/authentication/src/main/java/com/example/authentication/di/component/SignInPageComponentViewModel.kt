@@ -2,7 +2,7 @@ package com.example.authentication.di.component
 
 import androidx.lifecycle.ViewModel
 
-internal class AuthenticationComponentViewModel : ViewModel() {
+class SignInPageComponentViewModel: ViewModel() {
 
     private var component: AuthenticationComponent? = null
 

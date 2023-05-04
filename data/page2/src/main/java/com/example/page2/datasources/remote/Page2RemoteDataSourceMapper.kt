@@ -2,8 +2,9 @@ package com.example.page2.datasources.remote
 
 import com.example.network.entities.ProductDetailResponseDto
 import com.example.page2.entities.ProductDetailInfoDataEntity
+import javax.inject.Inject
 
-class Page2RemoteDataSourceMapper {
+class Page2RemoteDataSourceMapper @Inject constructor() {
 
     fun mapProductDetailResponseDtoToProductDetailInfoDataEntity(productDetailResponseDto: ProductDetailResponseDto): ProductDetailInfoDataEntity =
         ProductDetailInfoDataEntity(
