@@ -11,12 +11,12 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.authentication.R
-import com.example.authentication.databinding.FragmentSignInPageBinding
 import com.example.authentication.di.component.AuthenticationComponentDependencies
 import com.example.authentication.di.component.AuthenticationComponentDependenciesProvider
 import com.example.authentication.di.component.SignInPageComponentViewModel
 import com.example.authentication.domain.entities.User
+import com.example.features.authentication.R
+import com.example.features.authentication.databinding.FragmentSignInPageBinding
 import com.example.presentation.handleEmptyText
 import com.example.presentation.viewmodel.ViewModelFactory
 import com.google.android.material.textfield.TextInputEditText
@@ -74,7 +74,7 @@ class SignInPageFragment : Fragment(R.layout.fragment_sign_in_page) {
                     Toast.makeText(
                         context,
                         String.format(
-                            getString(com.example.theme.R.string.toast_user_is_already_exists),
+                            getString(com.example.core.theme.R.string.toast_user_is_already_exists),
                             userFromDb.firstName
                         ),
                         Toast.LENGTH_SHORT

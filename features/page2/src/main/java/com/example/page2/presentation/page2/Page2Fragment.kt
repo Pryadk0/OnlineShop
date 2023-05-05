@@ -13,9 +13,9 @@ import androidx.activity.OnBackPressedCallback
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.page2.R
-import com.example.page2.databinding.FragmentPage2Binding
-import com.example.page2.databinding.ItemTabProductDetailImageBinding
+import com.example.features.page2.R
+import com.example.features.page2.databinding.FragmentPage2Binding
+import com.example.features.page2.databinding.ItemTabProductDetailImageBinding
 import com.example.page2.di.component.Page2ComponentDependencies
 import com.example.page2.di.component.Page2ComponentDependenciesProvider
 import com.example.page2.di.component.Page2FragmentComponentViewModel
@@ -77,13 +77,13 @@ class Page2Fragment : Fragment(R.layout.fragment_page2) {
         with(binding) {
             textViewDetailProductName.text = productDetailInfo.name
             textViewDetailProductPrice.text = String.format(
-                getString(com.example.theme.R.string.price_double_2_symbols_after_dot),
+                getString(com.example.core.theme.R.string.price_double_2_symbols_after_dot),
                 productDetailInfo.price
             )
             textViewProductDescription.text = productDetailInfo.description
             textViewRatio.text = productDetailInfo.rating.toString()
             textViewReviews.text = String.format(
-                getString(com.example.theme.R.string.text_view_number_of_reviews),
+                getString(com.example.core.theme.R.string.text_view_number_of_reviews),
                 productDetailInfo.numberOfReviews
             )
             cardViewColor1.backgroundTintList =
@@ -93,7 +93,7 @@ class Page2Fragment : Fragment(R.layout.fragment_page2) {
             cardViewColor3.backgroundTintList =
                 ColorStateList.valueOf(Color.parseColor(productDetailInfo.colors[2]))
             textViewSumInCart.text = String.format(
-                getString(com.example.theme.R.string.price_double_2_symbols_after_dot),
+                getString(com.example.core.theme.R.string.price_double_2_symbols_after_dot),
                 productDetailInfo.price
             )
         }
@@ -190,7 +190,7 @@ class Page2Fragment : Fragment(R.layout.fragment_page2) {
             sumInCart += productDetailInfo.price
             binding.textViewSumInCart.text =
                 String.format(
-                    getString(com.example.theme.R.string.price_double_2_symbols_after_dot),
+                    getString(com.example.core.theme.R.string.price_double_2_symbols_after_dot),
                     sumInCart
                 )
             buttonPlus.isEnabled = true
@@ -201,7 +201,7 @@ class Page2Fragment : Fragment(R.layout.fragment_page2) {
             if (sumInCart > 0) {
                 sumInCart -= productDetailInfo.price
                 binding.textViewSumInCart.text = String.format(
-                    getString(com.example.theme.R.string.price_double_2_symbols_after_dot),
+                    getString(com.example.core.theme.R.string.price_double_2_symbols_after_dot),
                     sumInCart
                 )
             }
@@ -214,33 +214,33 @@ class Page2Fragment : Fragment(R.layout.fragment_page2) {
             if (selectedColor != 1) {
                 selectedColor = 1
                 binding.cardViewColor1SelectedState.backgroundTintList =
-                    ColorStateList.valueOf(requireContext().getColor(com.example.theme.R.color.selected_color_background))
+                    ColorStateList.valueOf(requireContext().getColor(com.example.core.theme.R.color.selected_color_background))
                 binding.cardViewColor2SelectedState.backgroundTintList =
-                    ColorStateList.valueOf(requireContext().getColor(com.example.theme.R.color.app_background))
+                    ColorStateList.valueOf(requireContext().getColor(com.example.core.theme.R.color.app_background))
                 binding.cardViewColor3SelectedState.backgroundTintList =
-                    ColorStateList.valueOf(requireContext().getColor(com.example.theme.R.color.app_background))
+                    ColorStateList.valueOf(requireContext().getColor(com.example.core.theme.R.color.app_background))
             }
         }
         binding.cardViewColor2.setOnClickListener {
             if (selectedColor != 2) {
                 selectedColor = 2
                 binding.cardViewColor2SelectedState.backgroundTintList =
-                    ColorStateList.valueOf(requireContext().getColor(com.example.theme.R.color.selected_color_background))
+                    ColorStateList.valueOf(requireContext().getColor(com.example.core.theme.R.color.selected_color_background))
                 binding.cardViewColor1SelectedState.backgroundTintList =
-                    ColorStateList.valueOf(requireContext().getColor(com.example.theme.R.color.app_background))
+                    ColorStateList.valueOf(requireContext().getColor(com.example.core.theme.R.color.app_background))
                 binding.cardViewColor3SelectedState.backgroundTintList =
-                    ColorStateList.valueOf(requireContext().getColor(com.example.theme.R.color.app_background))
+                    ColorStateList.valueOf(requireContext().getColor(com.example.core.theme.R.color.app_background))
             }
         }
         binding.cardViewColor3.setOnClickListener {
             if (selectedColor != 3) {
                 selectedColor = 3
                 binding.cardViewColor3SelectedState.backgroundTintList =
-                    ColorStateList.valueOf(requireContext().getColor(com.example.theme.R.color.selected_color_background))
+                    ColorStateList.valueOf(requireContext().getColor(com.example.core.theme.R.color.selected_color_background))
                 binding.cardViewColor1SelectedState.backgroundTintList =
-                    ColorStateList.valueOf(requireContext().getColor(com.example.theme.R.color.app_background))
+                    ColorStateList.valueOf(requireContext().getColor(com.example.core.theme.R.color.app_background))
                 binding.cardViewColor2SelectedState.backgroundTintList =
-                    ColorStateList.valueOf(requireContext().getColor(com.example.theme.R.color.app_background))
+                    ColorStateList.valueOf(requireContext().getColor(com.example.core.theme.R.color.app_background))
             }
         }
     }

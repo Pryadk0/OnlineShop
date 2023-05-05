@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.page2.R
-import com.example.page2.databinding.FragmentProductImageBinding
+import com.example.features.page2.R
+import com.example.features.page2.databinding.FragmentProductImageBinding
 import com.example.page2.di.component.Page2ComponentDependencies
 import com.example.page2.di.component.Page2ComponentDependenciesProvider
 import com.example.page2.di.component.ProductImageFragmentComponentViewModel

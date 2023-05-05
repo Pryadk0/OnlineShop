@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.theme'
+    namespace 'com.example.core.theme'
     compileSdk targetAndroidSdk
 
     defaultConfig {

@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.profile'
+    namespace 'com.example.features.profile'
     compileSdk targetAndroidSdk
 
     buildFeatures {

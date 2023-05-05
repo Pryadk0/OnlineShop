@@ -29,23 +29,22 @@ interface Page2Module {
     @Binds
     fun bindProductImageRepository(impl: ProductImageRepositoryAdapter): ProductImageRepository
 
-    @Page2FeatureScope
+    //ProductImageDataBindings:
     @Binds
     fun bindProductImageDataRepository(impl: ProductImageDataRepositoryImpl): ProductImageDataRepository
 
-    @Page2FeatureScope
     @Binds
     fun bindProductImageRemoteDataSource(impl: ProductImageRemoteDataSourceImpl): ProductImageRemoteDataSource
 
+    //Page2Bindings:
     @Page2FeatureScope
     @Binds
     fun bindPage2Repository(impl: Page2RepositoryAdapter): Page2Repository
 
-    @Page2FeatureScope
+    //Page2DataBindings:
     @Binds
     fun bindPage2DataRepository(impl: Page2DataRepositoryImpl): Page2DataRepository
 
-    @Page2FeatureScope
     @Binds
     fun bindPage2RemoteDataSource(impl: Page2RemoteDataSourceImpl): Page2RemoteDataSource
 

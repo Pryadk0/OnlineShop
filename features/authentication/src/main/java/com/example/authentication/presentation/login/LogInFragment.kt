@@ -11,11 +11,11 @@ import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources.getDrawable
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.authentication.R
-import com.example.authentication.databinding.FragmentLogInBinding
 import com.example.authentication.di.component.AuthenticationComponentDependencies
 import com.example.authentication.di.component.AuthenticationComponentDependenciesProvider
 import com.example.authentication.di.component.LogInComponentViewModel
+import com.example.features.authentication.R
+import com.example.features.authentication.databinding.FragmentLogInBinding
 import com.example.presentation.handleEmptyText
 import com.example.presentation.viewmodel.ViewModelFactory
 import javax.inject.Inject
@@ -88,14 +88,14 @@ class LogInFragment : Fragment(R.layout.fragment_log_in) {
                 binding.editTextPassword.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
                 binding.editTextPassword.setSelection(binding.editTextPassword.length())
                 (it as ImageView).setImageDrawable(
-                    getDrawable(it.context, com.example.theme.R.drawable.ic_password_visibility_off)
+                    getDrawable(it.context, com.example.core.theme.R.drawable.ic_password_visibility_off)
                 )
             } else {
                 binding.editTextPassword.inputType =
                     InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
                 binding.editTextPassword.setSelection(binding.editTextPassword.length())
                 (it as ImageView).setImageDrawable(
-                    getDrawable(it.context, com.example.theme.R.drawable.ic_password_visibility_on)
+                    getDrawable(it.context, com.example.core.theme.R.drawable.ic_password_visibility_on)
                 )
             }
         }

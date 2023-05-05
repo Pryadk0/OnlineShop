@@ -14,8 +14,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.page1.R
-import com.example.page1.databinding.FragmentPage1Binding
+import com.example.features.page1.R
+import com.example.features.page1.databinding.FragmentPage1Binding
 import com.example.page1.di.component.Page1ComponentDependencies
 import com.example.page1.di.component.Page1ComponentDependenciesProvider
 import com.example.page1.di.component.Page1ComponentViewModel

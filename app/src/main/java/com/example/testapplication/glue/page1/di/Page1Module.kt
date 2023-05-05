@@ -23,11 +23,13 @@ interface Page1Module {
     @Binds
     fun bindPageRepository(impl: Page1RepositoryAdapter): Page1Repository
 
-    @Page1FeatureScope
+    //Page1DataBindings:
+
+
     @Binds
     fun bindPage1DataRepository(impl: Page1DataRepositoryImpl): Page1DataRepository
 
-    @Page1FeatureScope
+
     @Binds
     fun bindPage1RemoteDataSource(impl: Page1RemoteDataSourceImpl): Page1RemoteDataSource
 

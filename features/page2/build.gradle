@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.page2'
+    namespace 'com.example.features.page2'
     compileSdk targetAndroidSdk
 
     buildFeatures {

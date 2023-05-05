@@ -10,7 +10,6 @@ import com.example.page2.di.component.Page2ComponentDependenciesProvider
 import com.example.profile.di.component.ProfileComponentDependencies
 import com.example.profile.di.component.ProfileComponentDependenciesProvider
 import com.example.testapplication.di.components.ApplicationComponent
-import com.example.testapplication.di.components.DaggerApplicationComponent
 
 class TestApplication : Application(),
     AuthenticationComponentDependenciesProvider,

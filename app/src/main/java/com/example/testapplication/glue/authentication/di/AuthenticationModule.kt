@@ -30,11 +30,11 @@ interface AuthenticationModule {
     fun bindAuthenticationRepository(impl: AuthenticationRepositoryAdapter): AuthenticationRepository
 
     //AuthenticationDataBindings:
-    @AuthenticationFeatureScope
+
     @Binds
     fun bindAuthenticationDataRepository(impl: AuthenticationDataRepositoryImpl): AuthenticationDataRepository
 
-    @AuthenticationFeatureScope
+
     @Binds
     fun bindAuthenticationLocalDataSource(impl: AuthenticationLocalDataSourceImpl): AuthenticationLocalDataSource
 }

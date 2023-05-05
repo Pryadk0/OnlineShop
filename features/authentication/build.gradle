@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.authentication'
+    namespace 'com.example.features.authentication'
     compileSdk targetAndroidSdk
 
     buildFeatures {

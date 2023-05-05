@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.page1'
+    namespace 'com.example.data.page1'
     compileSdk targetAndroidSdk
 
     defaultConfig {

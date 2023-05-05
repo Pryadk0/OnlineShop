@@ -12,8 +12,8 @@ import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.features.profile.databinding.FragmentProfileBinding
 import com.example.presentation.viewmodel.ViewModelFactory
-import com.example.profile.databinding.FragmentProfileBinding
 import com.example.profile.di.component.ProfileComponentDependencies
 import com.example.profile.di.component.ProfileComponentDependenciesProvider
 import com.example.profile.di.component.ProfileComponentViewModel

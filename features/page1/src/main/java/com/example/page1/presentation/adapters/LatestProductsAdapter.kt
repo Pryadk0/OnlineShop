@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.page1.databinding.ItemLatestProductBinding
+import com.example.features.page1.databinding.ItemLatestProductBinding
 import com.example.page1.domain.entities.LatestProduct
 import com.example.page1.domain.usecases.DownloadProductImageUseCase
 import javax.inject.Inject
@@ -35,7 +35,7 @@ class LatestProductsAdapter @Inject constructor(
             textViewItemLatestName.text = currentList[position].name
             textViewItemLatestPrice.text =
                 String.format(
-                    holder.itemView.context.getString(com.example.theme.R.string.recycler_view_latest_products_item_price),
+                    holder.itemView.context.getString(com.example.core.theme.R.string.recycler_view_latest_products_item_price),
                     currentList[position].price
                 ).replace(".", ",")
             textViewItemLatestCategory.text = currentList[position].category
