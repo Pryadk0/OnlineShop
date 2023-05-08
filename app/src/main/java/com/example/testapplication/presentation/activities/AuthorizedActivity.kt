@@ -7,9 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.graphics.BlendModeColorFilterCompat
 import androidx.core.graphics.BlendModeCompat
-import com.example.testapplication.R
+import com.example.testapplication.core.presentation.setStatusBarDarkIcons
+import com.example.core.theme.R
 import com.example.testapplication.databinding.ActivityAuthorizatedBinding
-import com.example.testapplication.presentation.activities.utils.DarkStatusBarSetter
 import com.example.testapplication.presentation.adapters.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
@@ -23,7 +23,7 @@ class AuthorizedActivity : AppCompatActivity() {
         binding = ActivityAuthorizatedBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        DarkStatusBarSetter.setStatusBarDarkIcons(this.window, this)
+        setStatusBarDarkIcons(this.window, this, R.color.app_background)
         initBottomTabNavigation()
         onBackPressedDispatcher.addCallback(this, object :
             OnBackPressedCallback(true) {

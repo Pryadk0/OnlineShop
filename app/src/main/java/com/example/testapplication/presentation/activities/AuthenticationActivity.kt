@@ -3,7 +3,8 @@ package com.example.testapplication.presentation.activities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.testapplication.databinding.ActivityAuthenticationBinding
-import com.example.testapplication.presentation.activities.utils.DarkStatusBarSetter
+import com.example.testapplication.core.presentation.setStatusBarDarkIcons
+import com.example.core.theme.R
 
 class AuthenticationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAuthenticationBinding
@@ -11,7 +12,7 @@ class AuthenticationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAuthenticationBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        DarkStatusBarSetter.setStatusBarDarkIcons(this.window, this)
+        setStatusBarDarkIcons(this.window, this, R.color.app_background)
 
     }
 }

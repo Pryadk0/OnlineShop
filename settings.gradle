@@ -14,3 +14,15 @@ dependencyResolutionManagement {
 }
 rootProject.name = "TestApplication"
 include ':app'
+include ':core:theme'
+include ':core:common'
+include ':features:authentication'
+include ':features:profile'
+include ':features:page1'
+include ':features:page2'
+include ':core:presentation'
+include ':data:authentication'
+include ':data:database'
+include ':data:network'
+include ':data:page1'
+include ':data:page2'

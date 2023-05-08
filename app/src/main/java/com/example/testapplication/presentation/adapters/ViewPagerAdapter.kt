@@ -3,8 +3,8 @@ package com.example.testapplication.presentation.adapters
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.testapplication.presentation.fragments.Page1Fragment
-import com.example.testapplication.presentation.fragments.ProfileFragment
+import com.example.testapplication.features.page1.presentation.Page1Fragment
+import com.example.testapplication.features.profile.presentation.ProfileFragment
 
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
     FragmentStateAdapter(fragmentActivity) {

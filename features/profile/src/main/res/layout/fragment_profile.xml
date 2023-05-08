@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_background">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_background"
+            tools:context="com.example.testapplication.features.profile.presentation.ProfileFragment">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar_fragment_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_background"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar_fragment_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/actionBarSize"
+                    app:navigationIcon="@drawable/ic_arrow_back"
+                    app:title="Profile"
+                    app:titleCentered="true"
+                    app:titleTextAppearance="@style/AppBarTitleFragmentProfile" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/shapeable_image_view_avatar_background_profile"
+                android:layout_width="61.06dp"
+                android:layout_height="61.06dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appbar_fragment_profile"
+                app:shapeAppearanceOverlay="@style/CircleImageView"
+                app:srcCompat="@color/shapeable_image_view_avatar_background" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/shapeable_image_view_avatar_profile"
+                android:layout_width="59.5dp"
+                android:layout_height="59.5dp"
+                app:layout_constraintBottom_toBottomOf="@id/shapeable_image_view_avatar_background_profile"
+                app:layout_constraintEnd_toEndOf="@id/shapeable_image_view_avatar_background_profile"
+                app:layout_constraintStart_toStartOf="@id/shapeable_image_view_avatar_background_profile"
+                app:layout_constraintTop_toTopOf="@id/shapeable_image_view_avatar_background_profile"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/CircleImageView"
+                app:srcCompat="@drawable/avatar" />
+
+            <TextView
+                android:id="@+id/text_view_change_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.94dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:minWidth="69dp"
+                android:minHeight="10dp"
+                android:text="@string/text_view_change_photo"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shapeable_image_view_avatar_background_profile"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/text_view_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:minWidth="168dp"
+                android:minHeight="16dp"
+                android:text="@string/text_view_satria_adhi_pradana"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_change_photo" />
+
+            <Button
+                android:id="@+id/button_upload_item"
+                android:layout_width="290dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/button_custom_blue"
+                android:fontFamily="@font/montserrat"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:paddingStart="50dp"
+                android:paddingEnd="70dp"
+                android:text="@string/buttn_text_upload_item"
+                android:textSize="14sp"
+                app:icon="@drawable/ic_upload_item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_profile_name" />
+
+            <Button
+                android:id="@+id/button_trade_store"
+                style="@style/ButtonProfileItem"
+                android:text="@string/button_text_trade_store"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_upload_item" />
+
+            <Button
+                android:id="@+id/button_payment_method"
+                style="@style/ButtonProfileItem"
+                android:text="@string/button_text_payment_method"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_trade_store" />
+
+            <Button
+                android:id="@+id/button_balance"
+                style="@style/ButtonProfileItem"
+                android:drawableRight="@color/app_background"
+                android:text="@string/button_text_balance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_payment_method" />
+
+            <Button
+                android:id="@+id/button_trade_history"
+                style="@style/ButtonProfileItem"
+                android:text="@string/button_text_trade_history"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_balance" />
+
+            <Button
+                android:id="@+id/button_restore_purchase"
+                style="@style/ButtonProfileItem"
+                android:drawableLeft="@drawable/ic_restore"
+                android:text="@string/button_text_restore_purchase"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_trade_history" />
+
+            <Button
+                android:id="@+id/button_help"
+                style="@style/ButtonProfileItem"
+                android:drawableLeft="@drawable/ic_help"
+                android:drawableRight="@color/app_background"
+                android:text="@string/button_text_help"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_restore_purchase" />
+
+            <Button
+                android:id="@+id/button_log_out"
+                style="@style/ButtonProfileItem"
+                android:drawableLeft="@drawable/ic_log_out"
+                android:drawableRight="@color/app_background"
+                android:text="@string/button_text_log_out"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_help"
+                android:layout_marginBottom="14dp"/>
+
+            <TextView
+                android:id="@+id/text_view_balance_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/button_text_1593"
+                android:textColor="@color/text_on_profile_fragment_items"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/button_trade_history"
+                app:layout_constraintEnd_toEndOf="@id/button_payment_method"
+                app:layout_constraintTop_toBottomOf="@id/button_payment_method" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/button_log_out"
+                    android:layout_marginTop="14dp"
+                    android:visibility="invisible"
+                    />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</layout>
