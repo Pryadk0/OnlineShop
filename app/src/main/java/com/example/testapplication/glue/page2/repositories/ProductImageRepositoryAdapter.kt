@@ -1,8 +1,8 @@
 package com.example.testapplication.glue.page2.repositories
 
 import android.widget.ImageView
-import com.example.page2.ProductImageDataRepository
-import com.example.page2.domain.ProductImageRepository
+import com.example.testapplication.data.page2.ProductImageDataRepository
+import com.example.testapplication.features.page2.domain.ProductImageRepository
 import javax.inject.Inject
 
 class ProductImageRepositoryAdapter @Inject constructor(

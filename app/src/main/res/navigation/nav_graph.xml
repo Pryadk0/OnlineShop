@@ -6,7 +6,7 @@
     app:startDestination="@id/signInPageFragment">
     <fragment
         android:id="@+id/signInPageFragment"
-        android:name="com.example.authentication.presentation.signin.SignInPageFragment"
+        android:name="com.example.testapplication.features.authentication.presentation.signin.SignInPageFragment"
         android:label="SignInPageFragment" >
         <action
             android:id="@+id/action_signInPageFragment_to_logInFragment"
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/logInFragment"
-        android:name="com.example.authentication.presentation.login.LogInFragment"
+        android:name="com.example.testapplication.features.authentication.presentation.login.LogInFragment"
         android:label="LogInFragment" >
         <action
             android:id="@+id/action_logInFragment_to_authorizedActivity"

@@ -1,15 +1,16 @@
 package com.example.testapplication.glue
 
 import android.app.Application
-import com.example.authentication.di.component.AuthenticationComponentDependencies
-import com.example.authentication.di.component.AuthenticationComponentDependenciesProvider
-import com.example.page1.di.component.Page1ComponentDependencies
-import com.example.page1.di.component.Page1ComponentDependenciesProvider
-import com.example.page2.di.component.Page2ComponentDependencies
-import com.example.page2.di.component.Page2ComponentDependenciesProvider
-import com.example.profile.di.component.ProfileComponentDependencies
-import com.example.profile.di.component.ProfileComponentDependenciesProvider
+import com.example.testapplication.features.authentication.di.component.AuthenticationComponentDependencies
+import com.example.testapplication.features.authentication.di.component.AuthenticationComponentDependenciesProvider
+import com.example.testapplication.features.page1.di.component.Page1ComponentDependencies
+import com.example.testapplication.features.page1.di.component.Page1ComponentDependenciesProvider
+import com.example.testapplication.features.page2.di.component.Page2ComponentDependencies
+import com.example.testapplication.features.page2.di.component.Page2ComponentDependenciesProvider
+import com.example.testapplication.features.profile.di.component.ProfileComponentDependencies
+import com.example.testapplication.features.profile.di.component.ProfileComponentDependenciesProvider
 import com.example.testapplication.di.components.ApplicationComponent
+import com.example.testapplication.di.components.DaggerApplicationComponent
 
 class TestApplication : Application(),
     AuthenticationComponentDependenciesProvider,

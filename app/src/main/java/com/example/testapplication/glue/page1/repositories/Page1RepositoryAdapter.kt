@@ -1,10 +1,10 @@
 package com.example.testapplication.glue.page1.repositories
 
 import android.widget.ImageView
-import com.example.page1.Page1DataRepository
-import com.example.page1.domain.entities.FlashSaleProduct
-import com.example.page1.domain.entities.LatestProduct
-import com.example.page1.domain.Page1Repository
+import com.example.testapplication.data.page1.Page1DataRepository
+import com.example.testapplication.features.page1.domain.entities.FlashSaleProduct
+import com.example.testapplication.features.page1.domain.entities.LatestProduct
+import com.example.testapplication.features.page1.domain.Page1Repository
 import com.example.testapplication.glue.page1.mappers.Page1RepositoryAdapterMapper
 import javax.inject.Inject
 

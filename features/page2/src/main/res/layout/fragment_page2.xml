@@ -6,7 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".presentation.fragments.Page2Fragment">
+        tools:context="com.example.testapplication.features.page2.presentation.page2.Page2Fragment">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view_add_to_cart"

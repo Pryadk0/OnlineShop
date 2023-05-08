@@ -1,7 +1,7 @@
 package com.example.testapplication.glue.authentication.mappers
 
-import com.example.authentication.domain.entities.User
-import com.example.authentication.entities.UserDataEntity
+import com.example.testapplication.features.authentication.domain.entities.User
+import com.example.testapplication.data.authentication.entities.UserDataEntity
 import javax.inject.Inject
 
 

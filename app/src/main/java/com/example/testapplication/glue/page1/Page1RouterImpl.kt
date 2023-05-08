@@ -3,7 +3,7 @@ package com.example.testapplication.glue.page1
 import android.content.Context
 import android.content.Intent
 import androidx.core.content.ContextCompat.startActivity
-import com.example.page1.Page1Router
+import com.example.testapplication.features.page1.Page1Router
 import com.example.testapplication.presentation.activities.DetailProductActivity
 import javax.inject.Inject
 

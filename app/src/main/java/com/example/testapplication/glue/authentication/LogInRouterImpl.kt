@@ -2,8 +2,8 @@ package com.example.testapplication.glue.authentication
 
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.authentication.LogInRouter
-import com.example.testapplication.presentation.fragments.LogInFragmentDirections
+import com.example.testapplication.features.authentication.LogInRouter
+import com.example.testapplication.features.authentication.presentation.login.LogInFragmentDirections
 import javax.inject.Inject
 
 class LogInRouterImpl @Inject constructor() : LogInRouter {

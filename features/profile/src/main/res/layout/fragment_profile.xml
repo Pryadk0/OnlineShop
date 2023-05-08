@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/app_background"
-            tools:context="com.example.profile.presentation.ProfileFragment">
+            tools:context="com.example.testapplication.features.profile.presentation.ProfileFragment">
 
             <com.google.android.material.appbar.AppBarLayout
                 android:id="@+id/appbar_fragment_profile"

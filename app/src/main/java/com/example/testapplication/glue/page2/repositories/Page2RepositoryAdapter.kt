@@ -1,9 +1,9 @@
 package com.example.testapplication.glue.page2.repositories
 
 import android.graphics.Bitmap
-import com.example.page2.Page2DataRepository
-import com.example.page2.domain.entities.ProductDetailInfo
-import com.example.page2.domain.Page2Repository
+import com.example.testapplication.data.page2.Page2DataRepository
+import com.example.testapplication.features.page2.domain.entities.ProductDetailInfo
+import com.example.testapplication.features.page2.domain.Page2Repository
 import com.example.testapplication.glue.page2.mappers.Page2RepositoryAdapterMapper
 import javax.inject.Inject
 

@@ -3,7 +3,7 @@ package com.example.testapplication.presentation.activities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.presentation.setStatusBarDarkIcons
-import com.example.testapplication.R
+import com.example.core.theme.R
 import com.example.testapplication.databinding.ActivityDetailProductBinding
 
 class DetailProductActivity : AppCompatActivity() {
