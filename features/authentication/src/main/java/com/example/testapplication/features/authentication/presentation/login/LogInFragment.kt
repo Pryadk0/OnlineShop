@@ -16,8 +16,8 @@ import com.example.testapplication.features.authentication.di.component.Authenti
 import com.example.testapplication.features.authentication.di.component.LogInComponentViewModel
 import com.example.features.authentication.R
 import com.example.features.authentication.databinding.FragmentLogInBinding
-import com.example.presentation.handleEmptyText
-import com.example.presentation.viewmodel.ViewModelFactory
+import com.example.testapplication.core.presentation.handleEmptyText
+import com.example.testapplication.core.presentation.viewmodel.ViewModelFactory
 import javax.inject.Inject
 
 

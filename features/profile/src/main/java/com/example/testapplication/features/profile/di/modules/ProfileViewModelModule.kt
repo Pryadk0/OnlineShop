@@ -1,7 +1,7 @@
 package com.example.testapplication.features.profile.di.modules
 
 import androidx.lifecycle.ViewModel
-import com.example.presentation.viewmodel.ViewModelKey
+import com.example.testapplication.core.presentation.viewmodel.ViewModelKey
 import com.example.testapplication.features.profile.presentation.ProfileViewModel
 import dagger.Binds
 import dagger.Module

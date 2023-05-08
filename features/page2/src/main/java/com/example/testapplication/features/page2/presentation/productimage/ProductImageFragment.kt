@@ -12,7 +12,7 @@ import com.example.features.page2.databinding.FragmentProductImageBinding
 import com.example.testapplication.features.page2.di.component.Page2ComponentDependencies
 import com.example.testapplication.features.page2.di.component.Page2ComponentDependenciesProvider
 import com.example.testapplication.features.page2.di.component.ProductImageFragmentComponentViewModel
-import com.example.presentation.viewmodel.ViewModelFactory
+import com.example.testapplication.core.presentation.viewmodel.ViewModelFactory
 import javax.inject.Inject
 
 private const val ARG_IMAGE_URL = "imageUrl"

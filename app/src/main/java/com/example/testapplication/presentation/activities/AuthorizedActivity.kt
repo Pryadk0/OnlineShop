@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.graphics.BlendModeColorFilterCompat
 import androidx.core.graphics.BlendModeCompat
-import com.example.presentation.setStatusBarDarkIcons
+import com.example.testapplication.core.presentation.setStatusBarDarkIcons
 import com.example.core.theme.R
 import com.example.testapplication.databinding.ActivityAuthorizatedBinding
 import com.example.testapplication.presentation.adapters.ViewPagerAdapter

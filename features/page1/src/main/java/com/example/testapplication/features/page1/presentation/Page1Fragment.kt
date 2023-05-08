@@ -21,7 +21,7 @@ import com.example.testapplication.features.page1.di.component.Page1ComponentDep
 import com.example.testapplication.features.page1.di.component.Page1ComponentViewModel
 import com.example.testapplication.features.page1.presentation.adapters.FlashSaleProductsAdapter
 import com.example.testapplication.features.page1.presentation.adapters.LatestProductsAdapter
-import com.example.presentation.viewmodel.ViewModelFactory
+import com.example.testapplication.core.presentation.viewmodel.ViewModelFactory
 import javax.inject.Inject
 
 

@@ -17,8 +17,8 @@ import com.example.testapplication.features.authentication.di.component.SignInPa
 import com.example.testapplication.features.authentication.domain.entities.User
 import com.example.features.authentication.R
 import com.example.features.authentication.databinding.FragmentSignInPageBinding
-import com.example.presentation.handleEmptyText
-import com.example.presentation.viewmodel.ViewModelFactory
+import com.example.testapplication.core.presentation.handleEmptyText
+import com.example.testapplication.core.presentation.viewmodel.ViewModelFactory
 import com.google.android.material.textfield.TextInputEditText
 import javax.inject.Inject
 

@@ -18,7 +18,7 @@ class TestApplication : Application(),
     Page2ComponentDependenciesProvider,
     ProfileComponentDependenciesProvider {
 
-    lateinit var applicationComponent: ApplicationComponent
+    private lateinit var applicationComponent: ApplicationComponent
 
     override fun onCreate() {
         super.onCreate()

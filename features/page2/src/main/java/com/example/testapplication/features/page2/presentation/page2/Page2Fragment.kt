@@ -21,7 +21,7 @@ import com.example.testapplication.features.page2.di.component.Page2ComponentDep
 import com.example.testapplication.features.page2.di.component.Page2FragmentComponentViewModel
 import com.example.testapplication.features.page2.domain.entities.ProductDetailInfo
 import com.example.testapplication.features.page2.presentation.page2.adapters.ViewPagerDetailProductAdapter
-import com.example.presentation.viewmodel.ViewModelFactory
+import com.example.testapplication.core.presentation.viewmodel.ViewModelFactory
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import javax.inject.Inject
