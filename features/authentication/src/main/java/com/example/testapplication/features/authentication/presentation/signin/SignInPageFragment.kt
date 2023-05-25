@@ -7,6 +7,7 @@ import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -106,7 +107,7 @@ class SignInPageFragment : Fragment(R.layout.fragment_sign_in_page) {
     }
 
     private fun handleInvalidEmail(
-        editTextPassword: TextInputEditText,
+        editTextPassword: EditText,
         textViewError: TextView
     ): Boolean {
         if (!TextUtils.isEmpty(editTextPassword.text) && Patterns.EMAIL_ADDRESS.matcher(

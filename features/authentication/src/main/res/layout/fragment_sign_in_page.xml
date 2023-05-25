@@ -22,16 +22,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/edit_text_first_name_fragment_sign_in"
             style="@style/EditTextField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
+            android:autofillHints="name"
             android:hint="@string/sign_in_fragment_first_name_hint"
+            android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_view_sign_in" />
+            app:layout_constraintTop_toBottomOf="@+id/text_view_sign_in"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/text_view_first_name_fragment_sign_in_page_error"
@@ -40,16 +43,19 @@
             app:layout_constraintStart_toStartOf="@id/edit_text_first_name_fragment_sign_in"
             app:layout_constraintTop_toBottomOf="@id/edit_text_first_name_fragment_sign_in" />
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/edit_text_last_name"
             style="@style/EditTextField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
+            android:autofillHints="name"
             android:hint="@string/sign_in_fragment_last_name_hint"
+            android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_text_first_name_fragment_sign_in" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_first_name_fragment_sign_in"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/text_view_last_name_error"
@@ -59,16 +65,19 @@
             app:layout_constraintTop_toBottomOf="@id/edit_text_last_name" />
 
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/edit_text_email"
             style="@style/EditTextField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
+            android:autofillHints="emailAddress"
             android:hint="@string/sign_in_fragment_email_hint"
+            android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_text_last_name" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_last_name"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/text_view_email_error"
