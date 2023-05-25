@@ -98,7 +98,7 @@
 
         <TextView
             android:id="@+id/text_view_already_have_an_account"
-            android:layout_width="129dp"
+            android:layout_width="wrap_content"
             android:layout_height="16dp"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/montserrat"
@@ -124,7 +124,7 @@
 
         <TextView
             android:id="@+id/text_view_sign_in_with_google"
-            android:layout_width="117dp"
+            android:layout_width="wrap_content"
             android:layout_height="16dp"
             android:layout_marginTop="76dp"
             android:fontFamily="@font/montserrat"
@@ -152,7 +152,7 @@
 
         <TextView
             android:id="@+id/text_view_sign_in_with_apple"
-            android:layout_width="117dp"
+            android:layout_width="wrap_content"
             android:layout_height="16dp"
             android:layout_marginTop="42dp"
             android:fontFamily="@font/montserrat"
