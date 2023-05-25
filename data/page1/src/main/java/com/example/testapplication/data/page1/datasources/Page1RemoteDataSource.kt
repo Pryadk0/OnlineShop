@@ -3,15 +3,12 @@ package com.example.testapplication.data.page1.datasources
 import android.widget.ImageView
 import com.example.testapplication.data.page1.entities.FlashSaleProductDataEntity
 import com.example.testapplication.data.page1.entities.LatestProductDataEntity
-import io.reactivex.Observable
 
 interface Page1RemoteDataSource {
 
-    fun getLatestProductsResponse(): Observable<List<LatestProductDataEntity>>
-
-    fun getFlashSaleProductsResponse(): Observable<List<FlashSaleProductDataEntity>>
+    fun getAllProducts(callback: (List<LatestProductDataEntity>, List<FlashSaleProductDataEntity>) -> Unit)
 
     fun downloadProductImage(imageUrl: String, container: ImageView)
 
-    fun getSearchWords(): Observable<List<String>>
+    fun getSearchWords(callback: (List<String>) -> Unit)
 }
