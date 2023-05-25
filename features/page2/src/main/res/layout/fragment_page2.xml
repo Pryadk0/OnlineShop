@@ -54,7 +54,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="14dp"
                 android:fontFamily="@font/poppins_medium"
-                android:text="@string/text_viewquantity"
+                android:text="@string/text_view_quantity"
                 android:textColor="@color/text_on_background_grey"
                 android:textSize="9sp"
                 tools:ignore="SmallSp" />
@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/ic_tab_bar_button_backround_round"
+            android:background="@drawable/ic_tab_bar_button_background_round"
             android:elevation="1dp"
             android:foreground="?actionBarItemBackground"
             android:translationZ="1dp"
@@ -385,7 +385,8 @@
                     android:textSize="9sp"
                     app:drawableStartCompat="@drawable/ic_star"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/text_view_detail_product_price" />
+                    app:layout_constraintTop_toBottomOf="@id/text_view_detail_product_price"
+                    tools:ignore="SmallSp" />
 
                 <TextView
                     android:id="@+id/text_view_reviews"
@@ -398,7 +399,8 @@
                     android:textColor="@color/text_on_background_grey"
                     android:textSize="9sp"
                     app:layout_constraintStart_toEndOf="@id/text_view_ratio"
-                    app:layout_constraintTop_toBottomOf="@id/text_view_detail_product_price" />
+                    app:layout_constraintTop_toBottomOf="@id/text_view_detail_product_price"
+                    tools:ignore="SmallSp" />
 
                 <TextView
                     android:id="@+id/text_view_colors_title"

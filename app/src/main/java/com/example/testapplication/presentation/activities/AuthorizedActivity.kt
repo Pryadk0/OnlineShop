@@ -59,12 +59,22 @@ class AuthorizedActivity : AppCompatActivity() {
             binding.viewPagerAuthorized
         ) { tab, position ->
             when (position) {
-                0 -> tab.icon = AppCompatResources.getDrawable(this, R.drawable.ic_home)
-                1 -> tab.icon = AppCompatResources.getDrawable(this, R.drawable.ic_heart)
-                2 -> tab.icon = AppCompatResources.getDrawable(this, R.drawable.ic_cart)
-                3 -> tab.icon = AppCompatResources.getDrawable(this, R.drawable.ic_messages)
-                4 -> tab.icon = AppCompatResources.getDrawable(this, R.drawable.ic_profile)
+                TAB_POSITION_HOME -> tab.icon = AppCompatResources.getDrawable(this, R.drawable.ic_home)
+                TAB_POSITION_FAVORITES -> tab.icon = AppCompatResources.getDrawable(this, R.drawable.ic_heart)
+                TAB_POSITION_CART -> tab.icon = AppCompatResources.getDrawable(this, R.drawable.ic_cart)
+                TAB_POSITION_CHAT -> tab.icon = AppCompatResources.getDrawable(this, R.drawable.ic_messages)
+                TAB_POSITION_PROFILE -> tab.icon = AppCompatResources.getDrawable(this, R.drawable.ic_profile)
             }
         }.attach()
+    }
+
+    companion object {
+
+        private const val TAB_POSITION_HOME = 0
+        private const val TAB_POSITION_FAVORITES = 1
+        private const val TAB_POSITION_CART = 2
+        private const val TAB_POSITION_CHAT = 3
+        private const val TAB_POSITION_PROFILE = 4
+
     }
 }

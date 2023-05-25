@@ -11,13 +11,13 @@ import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources.getDrawable
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.testapplication.features.authentication.di.component.AuthenticationComponentDependencies
-import com.example.testapplication.features.authentication.di.component.AuthenticationComponentDependenciesProvider
-import com.example.testapplication.features.authentication.di.component.LogInComponentViewModel
 import com.example.features.authentication.R
 import com.example.features.authentication.databinding.FragmentLogInBinding
 import com.example.testapplication.core.presentation.handleEmptyText
 import com.example.testapplication.core.presentation.viewmodel.ViewModelFactory
+import com.example.testapplication.features.authentication.di.component.AuthenticationComponentDependencies
+import com.example.testapplication.features.authentication.di.component.AuthenticationComponentDependenciesProvider
+import com.example.testapplication.features.authentication.di.component.LogInComponentViewModel
 import javax.inject.Inject
 
 
@@ -28,6 +28,7 @@ class LogInFragment : Fragment(R.layout.fragment_log_in) {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
+    private lateinit var viewModel: LogInViewModel
 
     override fun onAttach(context: Context) {
         val componentDependencies: AuthenticationComponentDependencies =
@@ -50,9 +51,33 @@ class LogInFragment : Fragment(R.layout.fragment_log_in) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel = ViewModelProvider(this, viewModelFactory)[LogInViewModel::class.java]
         setPasswordSymbolsVisibility()
-        val viewModel = ViewModelProvider(this, viewModelFactory)[LogInViewModel::class.java]
+        setOnCLickListeners()
+    }
 
+    private fun setPasswordSymbolsVisibility() {
+        binding.editTextPassword.inputType =
+            InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+        binding.imageViewPasswordVisibility.setOnClickListener {
+            if (binding.editTextPassword.inputType == InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD) {
+                binding.editTextPassword.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                binding.editTextPassword.setSelection(binding.editTextPassword.length())
+                (it as ImageView).setImageDrawable(
+                    getDrawable(it.context, com.example.core.theme.R.drawable.ic_password_visibility_off)
+                )
+            } else {
+                binding.editTextPassword.inputType =
+                    InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                binding.editTextPassword.setSelection(binding.editTextPassword.length())
+                (it as ImageView).setImageDrawable(
+                    getDrawable(it.context, com.example.core.theme.R.drawable.ic_password_visibility_on)
+                )
+            }
+        }
+    }
+
+    private fun setOnCLickListeners(){
         binding.buttonLogIn.setOnClickListener {
             if (
                 handleEmptyText(
@@ -75,28 +100,6 @@ class LogInFragment : Fragment(R.layout.fragment_log_in) {
                         Toast.LENGTH_SHORT
                     ).show()
                 }
-            }
-
-        }
-    }
-
-    private fun setPasswordSymbolsVisibility() {
-        binding.editTextPassword.inputType =
-            InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-        binding.imageViewPasswordVisibility.setOnClickListener {
-            if (binding.editTextPassword.inputType == InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD) {
-                binding.editTextPassword.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-                binding.editTextPassword.setSelection(binding.editTextPassword.length())
-                (it as ImageView).setImageDrawable(
-                    getDrawable(it.context, com.example.core.theme.R.drawable.ic_password_visibility_off)
-                )
-            } else {
-                binding.editTextPassword.inputType =
-                    InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-                binding.editTextPassword.setSelection(binding.editTextPassword.length())
-                (it as ImageView).setImageDrawable(
-                    getDrawable(it.context, com.example.core.theme.R.drawable.ic_password_visibility_on)
-                )
             }
         }
     }

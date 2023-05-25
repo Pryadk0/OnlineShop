@@ -16,12 +16,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.features.page1.R
 import com.example.features.page1.databinding.FragmentPage1Binding
+import com.example.testapplication.core.presentation.viewmodel.ViewModelFactory
 import com.example.testapplication.features.page1.di.component.Page1ComponentDependencies
 import com.example.testapplication.features.page1.di.component.Page1ComponentDependenciesProvider
 import com.example.testapplication.features.page1.di.component.Page1ComponentViewModel
 import com.example.testapplication.features.page1.presentation.adapters.FlashSaleProductsAdapter
 import com.example.testapplication.features.page1.presentation.adapters.LatestProductsAdapter
-import com.example.testapplication.core.presentation.viewmodel.ViewModelFactory
 import javax.inject.Inject
 
 
@@ -59,20 +59,22 @@ class Page1Fragment : Fragment(R.layout.fragment_page1) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel = ViewModelProvider(this, viewModelFactory)[Page1ViewModel::class.java]
+        initRecyclerViews()
+        setOnClickListeners()
+        setAutoCompletableTextViewCompletionHints()
+    }
 
+    private fun initRecyclerViews() {
         with(binding.recyclerViewLatest) {
             layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
             adapter = latestProductAdapter
         }
-
         with(binding.recyclerViewFlashSale) {
             layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
             adapter = flashSaleProductAdapter
         }
-
-        viewModel = ViewModelProvider(this, viewModelFactory)[Page1ViewModel::class.java]
         with(viewModel) {
-            updateAllProductsLiveData()
             latestProductsLiveData.observe(viewLifecycleOwner) {
                 latestProductAdapter.submitList(it)
             }
@@ -80,12 +82,13 @@ class Page1Fragment : Fragment(R.layout.fragment_page1) {
                 flashSaleProductAdapter.submitList(it)
             }
         }
+    }
+
+    private fun setOnClickListeners() {
         flashSaleProductAdapter.onFlashSaleProductCLickListener = { _ ->
             //get data from clicked item to open the screen with item detail info
             viewModel.startFlashSaleProductDetailScreen(requireContext())
         }
-
-        setAutoCompletableTextViewCompletionHints()
     }
 
     private fun setAutoCompletableTextViewCompletionHints() {
