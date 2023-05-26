@@ -5,22 +5,22 @@ import com.example.testapplication.data.network.entities.FlashSaleProductsRespon
 import com.example.testapplication.data.network.entities.LatestProductsResponse
 import com.example.testapplication.data.network.entities.ProductDetailResponseDto
 import com.example.testapplication.data.network.entities.SearchWordsResponseDto
-import io.reactivex.Observable
+import io.reactivex.Single
 import retrofit2.http.GET
 
 interface ApiService {
 
     @GET(ENDPOINT_LATEST_PRODUCTS)
-    fun getLatestProducts(): Observable<LatestProductsResponse>
+    fun getLatestProducts(): Single<LatestProductsResponse>
 
     @GET(ENDPOINT_FLASH_SALE)
-    fun getFlashSaleProducts(): Observable<FlashSaleProductsResponse>
+    fun getFlashSaleProducts(): Single<FlashSaleProductsResponse>
 
     @GET(ENDPOINT_PRODUCT_DETAIL)
-    fun getProductDetailInfo(): Observable<ProductDetailResponseDto>
+    fun getProductDetailInfo(): Single<ProductDetailResponseDto>
 
     @GET(ENDPOINT_SEARCH_WORDS)
-    fun getSearchWordsResponseDto(): Observable<SearchWordsResponseDto>
+    fun getSearchWordsResponseDto(): Single<SearchWordsResponseDto>
 
 
 
