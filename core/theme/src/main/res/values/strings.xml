@@ -56,7 +56,7 @@
     <string name="image_view_selected_product_description">The image of selected product</string>
     <string name="text_view_color">Color:</string>
     <string name="text_view_number_of_reviews">(%d reviews)</string>
-    <string name="text_viewquantity">Quantity:</string>
+    <string name="text_view_quantity">Quantity:</string>
 
 
 </resources>

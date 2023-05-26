@@ -16,12 +16,12 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.features.page2.R
 import com.example.features.page2.databinding.FragmentPage2Binding
 import com.example.features.page2.databinding.ItemTabProductDetailImageBinding
+import com.example.testapplication.core.presentation.viewmodel.ViewModelFactory
 import com.example.testapplication.features.page2.di.component.Page2ComponentDependencies
 import com.example.testapplication.features.page2.di.component.Page2ComponentDependenciesProvider
 import com.example.testapplication.features.page2.di.component.Page2FragmentComponentViewModel
 import com.example.testapplication.features.page2.domain.entities.ProductDetailInfo
 import com.example.testapplication.features.page2.presentation.page2.adapters.ViewPagerDetailProductAdapter
-import com.example.testapplication.core.presentation.viewmodel.ViewModelFactory
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import javax.inject.Inject
@@ -37,8 +37,8 @@ class Page2Fragment : Fragment(R.layout.fragment_page2) {
     private lateinit var viewModel: Page2ViewModel
     private lateinit var viewPagerAdapter: ViewPagerDetailProductAdapter
     private lateinit var productDetailInfo: ProductDetailInfo
-    private var sumInCart: Double = 0.00
-    private var selectedColor = 1
+    private var sumInCart: Double = INITIAL_SUM_IN_CART
+    private var selectedColor = COLOR_1
 
 
     override fun onAttach(context: Context) {
@@ -62,10 +62,9 @@ class Page2Fragment : Fragment(R.layout.fragment_page2) {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel = ViewModelProvider(this, viewModelFactory)[Page2ViewModel::class.java]
-        viewModel.updateProductDetailInfoLiveData()
         viewModel.productDetailInfoLiveData.observe(viewLifecycleOwner) {
             productDetailInfo = it
-            initActivityViewsWithLoadedData()
+            fillViewsWithLoadedData()
             initViewPager()
             setCartControlButtonsOnClickListeners()
             setColorButtonsOnClickListeners()
@@ -73,7 +72,7 @@ class Page2Fragment : Fragment(R.layout.fragment_page2) {
         }
     }
 
-    private fun initActivityViewsWithLoadedData() {
+    private fun fillViewsWithLoadedData() {
         with(binding) {
             textViewDetailProductName.text = productDetailInfo.name
             textViewDetailProductPrice.text = String.format(
@@ -211,8 +210,8 @@ class Page2Fragment : Fragment(R.layout.fragment_page2) {
 
     private fun setColorButtonsOnClickListeners() {
         binding.cardViewColor1.setOnClickListener {
-            if (selectedColor != 1) {
-                selectedColor = 1
+            if (selectedColor != COLOR_1) {
+                selectedColor = COLOR_1
                 binding.cardViewColor1SelectedState.backgroundTintList =
                     ColorStateList.valueOf(requireContext().getColor(com.example.core.theme.R.color.selected_color_background))
                 binding.cardViewColor2SelectedState.backgroundTintList =
@@ -222,8 +221,8 @@ class Page2Fragment : Fragment(R.layout.fragment_page2) {
             }
         }
         binding.cardViewColor2.setOnClickListener {
-            if (selectedColor != 2) {
-                selectedColor = 2
+            if (selectedColor != COLOR_2) {
+                selectedColor = COLOR_2
                 binding.cardViewColor2SelectedState.backgroundTintList =
                     ColorStateList.valueOf(requireContext().getColor(com.example.core.theme.R.color.selected_color_background))
                 binding.cardViewColor1SelectedState.backgroundTintList =
@@ -233,8 +232,8 @@ class Page2Fragment : Fragment(R.layout.fragment_page2) {
             }
         }
         binding.cardViewColor3.setOnClickListener {
-            if (selectedColor != 3) {
-                selectedColor = 3
+            if (selectedColor != COLOR_3) {
+                selectedColor = COLOR_3
                 binding.cardViewColor3SelectedState.backgroundTintList =
                     ColorStateList.valueOf(requireContext().getColor(com.example.core.theme.R.color.selected_color_background))
                 binding.cardViewColor1SelectedState.backgroundTintList =
@@ -262,5 +261,14 @@ class Page2Fragment : Fragment(R.layout.fragment_page2) {
     override fun onDestroy() {
         _binding = null
         super.onDestroy()
+    }
+
+    companion object {
+
+        private const val INITIAL_SUM_IN_CART = 0.00
+        private const val COLOR_1 = 0
+        private const val COLOR_2 = 1
+        private const val COLOR_3 = 2
+
     }
 }

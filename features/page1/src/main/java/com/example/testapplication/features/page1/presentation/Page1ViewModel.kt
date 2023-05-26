@@ -18,6 +18,10 @@ class Page1ViewModel @Inject constructor(
     private val page1Router: Page1Router
 ) : ViewModel() {
 
+    init {
+        updateAllProductsLiveData()
+    }
+
     private val _latestProductsLiveData: MutableLiveData<List<LatestProduct>> = MutableLiveData()
     val latestProductsLiveData: LiveData<List<LatestProduct>>
         get() = _latestProductsLiveData
@@ -25,7 +29,7 @@ class Page1ViewModel @Inject constructor(
     val flashSaleProductLiveData: LiveData<List<FlashSaleProduct>>
         get() = _flashSaleProductLiveData
 
-    fun updateAllProductsLiveData() =
+    private fun updateAllProductsLiveData() =
         getAllProductsUseCase.getAllProducts { latestProductsList, flashSaleProductsList ->
             _latestProductsLiveData.value = latestProductsList
             _flashSaleProductLiveData.value = flashSaleProductsList
@@ -36,5 +40,4 @@ class Page1ViewModel @Inject constructor(
 
     fun startFlashSaleProductDetailScreen(context: Context) =
         page1Router.startFlashSaleProductDetailScreen(context)
-
 }

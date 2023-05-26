@@ -11,5 +11,4 @@ class ProductImageRemoteDataSourceImpl @Inject constructor(): ProductImageRemote
         Picasso.get()
             .load(imageUrl)
             .into(container)
-
 }

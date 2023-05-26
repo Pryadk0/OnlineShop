@@ -20,13 +20,16 @@ class Page2ViewModel @Inject constructor(
     val productDetailInfoLiveData: LiveData<ProductDetailInfo>
         get() = _productDetailInfoLiveData
 
+    init {
+        updateProductDetailInfoLiveData()
+    }
+
+    private fun updateProductDetailInfoLiveData() = getProductDetailInfoUseCase.getProductDetailInfo {
+        _productDetailInfoLiveData.value = it
+    }
 
     fun downloadProductImageDrawable(imageUrl: String, callback: (Bitmap) -> Unit) =
         downloadProductImageDrawableUseCase.downloadProductImageDrawable(imageUrl, callback)
-
-    fun updateProductDetailInfoLiveData() = getProductDetailInfoUseCase.getProductDetailInfo {
-        _productDetailInfoLiveData.value = it
-    }
 
     fun startAuthorizedScreen(context: Context) {
         page2Router.startAuthorizedScreen(context)

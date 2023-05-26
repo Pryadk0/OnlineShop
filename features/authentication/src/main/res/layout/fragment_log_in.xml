@@ -23,16 +23,19 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/edit_text_first_name_fragment_login"
             style="@style/EditTextField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="72dp"
+            android:autofillHints="name"
             android:hint="@string/sign_in_fragment_first_name_hint"
+            android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_view_welcome_back" />
+            app:layout_constraintTop_toBottomOf="@+id/text_view_welcome_back"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/text_view_first_name_fragment_log_in_error"
@@ -42,17 +45,19 @@
             app:layout_constraintTop_toBottomOf="@id/edit_text_first_name_fragment_login" />
 
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/edit_text_password"
             style="@style/EditTextField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autofillHints="name"
             android:ems="20"
             android:hint="@string/text_view_password"
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/edit_text_first_name_fragment_login" />
+            app:layout_constraintTop_toBottomOf="@id/edit_text_first_name_fragment_login"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/text_view_password_error"

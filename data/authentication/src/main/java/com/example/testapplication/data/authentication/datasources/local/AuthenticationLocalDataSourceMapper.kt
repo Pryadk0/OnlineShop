@@ -6,11 +6,11 @@ import javax.inject.Inject
 
 class AuthenticationLocalDataSourceMapper @Inject constructor() {
 
-    fun mapUserDbModelToUserDataEntity(userDbModel: UserDbModel) = UserDataEntity(
+    fun mapUserDbModelToUserDataEntity(userDbModel: UserDbModel): UserDataEntity = UserDataEntity(
         userDbModel.firstName, userDbModel.lastName, userDbModel.email
     )
 
-    fun mapUserDataEntityToUserDbModel(userDataEntity: UserDataEntity) =
+    fun mapUserDataEntityToUserDbModel(userDataEntity: UserDataEntity): UserDbModel =
         UserDbModel(userDataEntity.firstName, userDataEntity.lastName, userDataEntity.email)
 
 }
