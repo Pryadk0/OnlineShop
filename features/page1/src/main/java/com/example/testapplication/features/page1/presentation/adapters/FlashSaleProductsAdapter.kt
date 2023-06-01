@@ -10,7 +10,7 @@ import com.example.testapplication.features.page1.domain.entities.FlashSaleProdu
 import com.example.testapplication.features.page1.domain.usecases.DownloadProductImageUseCase
 import javax.inject.Inject
 
-class FlashSaleProductsAdapter @Inject constructor(
+internal class FlashSaleProductsAdapter @Inject constructor(
     private val downloadProductImageUseCase: DownloadProductImageUseCase
 ) : ListAdapter<FlashSaleProduct, FlashSaleProductsAdapter.FlashSaleProductsViewHolder>(
     DIFF_CALLBACK

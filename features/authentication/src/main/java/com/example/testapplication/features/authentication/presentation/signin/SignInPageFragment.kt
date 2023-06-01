@@ -23,7 +23,7 @@ import com.example.testapplication.features.authentication.domain.entities.User
 import javax.inject.Inject
 
 
-class SignInPageFragment : Fragment(R.layout.fragment_sign_in_page) {
+internal class SignInPageFragment : Fragment(R.layout.fragment_sign_in_page) {
     private var _binding: FragmentSignInPageBinding? = null
     private val binding: FragmentSignInPageBinding
         get() = _binding ?: throw RuntimeException("${this.javaClass.simpleName}Binding == null")

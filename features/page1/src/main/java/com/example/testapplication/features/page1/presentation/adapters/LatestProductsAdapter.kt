@@ -10,7 +10,7 @@ import com.example.testapplication.features.page1.domain.entities.LatestProduct
 import com.example.testapplication.features.page1.domain.usecases.DownloadProductImageUseCase
 import javax.inject.Inject
 
-class LatestProductsAdapter @Inject constructor(
+internal class LatestProductsAdapter @Inject constructor(
     private val downloadProductImageUseCase: DownloadProductImageUseCase
 ) : ListAdapter<LatestProduct, LatestProductsAdapter.LatestProductsViewHolder>(DIFF_CALLBACK) {
     companion object {

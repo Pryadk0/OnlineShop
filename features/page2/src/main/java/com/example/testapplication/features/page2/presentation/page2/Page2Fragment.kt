@@ -27,7 +27,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import javax.inject.Inject
 
 
-class Page2Fragment : Fragment(R.layout.fragment_page2) {
+internal class Page2Fragment : Fragment(R.layout.fragment_page2) {
     private var _binding: FragmentPage2Binding? = null
     private val binding: FragmentPage2Binding
         get() = _binding ?: throw RuntimeException("${this.javaClass.simpleName}Binding == null")

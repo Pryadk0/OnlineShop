@@ -3,7 +3,7 @@ package com.example.testapplication.features.profile.di.component
 import androidx.lifecycle.ViewModel
 import java.lang.RuntimeException
 
-class ProfileComponentViewModel : ViewModel() {
+internal class ProfileComponentViewModel : ViewModel() {
 
     private var component: ProfileComponent? = null
 

@@ -7,7 +7,7 @@ import com.example.testapplication.features.authentication.domain.entities.User
 import com.example.testapplication.features.authentication.domain.usecases.GetUserFromDbUseCase
 import javax.inject.Inject
 
-class LogInViewModel @Inject constructor(
+internal class LogInViewModel @Inject constructor(
     private val getUserFromDbUseCase: GetUserFromDbUseCase,
     private val logInRouter: LogInRouter
 ) : ViewModel() {

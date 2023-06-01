@@ -8,7 +8,7 @@ import com.example.testapplication.features.page2.domain.entities.ProductDetailI
 import com.example.testapplication.features.page2.domain.usecases.DownloadProductImageUseCase
 import javax.inject.Inject
 
-class ProductImageViewModel @Inject constructor(
+internal class ProductImageViewModel @Inject constructor(
     private val downloadProductImageUseCase: DownloadProductImageUseCase
 ) : ViewModel() {
     private val _productDetailInfoLiveData: MutableLiveData<ProductDetailInfo> = MutableLiveData()

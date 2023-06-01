@@ -12,7 +12,7 @@ import com.example.testapplication.features.page1.domain.usecases.GetSearchWords
 
 import javax.inject.Inject
 
-class Page1ViewModel @Inject constructor(
+internal class Page1ViewModel @Inject constructor(
     private val getAllProductsUseCase: GetAllProductsUseCase,
     private val getSearchWordsUseCase: GetSearchWordsUseCase,
     private val page1Router: Page1Router

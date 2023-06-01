@@ -11,7 +11,7 @@ import com.example.testapplication.features.page2.domain.usecases.DownloadProduc
 import com.example.testapplication.features.page2.domain.usecases.GetProductDetailInfoUseCase
 import javax.inject.Inject
 
-class Page2ViewModel @Inject constructor(
+internal class Page2ViewModel @Inject constructor(
     private val getProductDetailInfoUseCase: GetProductDetailInfoUseCase,
     private val downloadProductImageDrawableUseCase: DownloadProductImageDrawableUseCase,
     private val page2Router: Page2Router

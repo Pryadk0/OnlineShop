@@ -4,7 +4,7 @@ import com.example.testapplication.features.authentication.domain.entities.User
 import com.example.testapplication.features.authentication.domain.AuthenticationRepository
 import javax.inject.Inject
 
-class WriteUserInDbUseCase @Inject constructor(
+internal class WriteUserInDbUseCase @Inject constructor(
     private val repository: AuthenticationRepository
 ) {
 

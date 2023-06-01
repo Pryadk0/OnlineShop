@@ -11,7 +11,7 @@ import dagger.Component
     modules = [Page2ViewModelModule::class],
     dependencies = [Page2ComponentDependencies::class]
 )
-interface Page2Component {
+internal interface Page2Component {
 
     fun injectPage2Fragment(page2Fragment: Page2Fragment)
 

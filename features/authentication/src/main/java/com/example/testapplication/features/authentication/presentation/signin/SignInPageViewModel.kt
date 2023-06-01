@@ -8,7 +8,7 @@ import com.example.testapplication.features.authentication.domain.usecases.GetUs
 import com.example.testapplication.features.authentication.domain.usecases.WriteUserInDbUseCase
 import javax.inject.Inject
 
-class SignInPageViewModel @Inject constructor(
+internal class SignInPageViewModel @Inject constructor(
     private val getUserFromDbUseCase: GetUserFromDbUseCase,
     private val writeUserInDbUseCase: WriteUserInDbUseCase,
     private val signInRouter: SignInRouter

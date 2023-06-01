@@ -3,7 +3,7 @@ package com.example.testapplication.features.page2.di.component
 import androidx.lifecycle.ViewModel
 import java.lang.RuntimeException
 
-class Page2FragmentComponentViewModel: ViewModel() {
+internal class Page2FragmentComponentViewModel: ViewModel() {
 
     private var component: Page2Component? = null
 

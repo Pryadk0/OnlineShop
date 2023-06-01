@@ -2,7 +2,7 @@ package com.example.testapplication.features.authentication.di.component
 
 import androidx.lifecycle.ViewModel
 
-class SignInPageComponentViewModel: ViewModel() {
+internal class SignInPageComponentViewModel: ViewModel() {
 
     private var component: AuthenticationComponent? = null
 

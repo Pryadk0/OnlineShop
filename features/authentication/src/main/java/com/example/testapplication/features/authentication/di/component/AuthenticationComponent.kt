@@ -11,7 +11,7 @@ import dagger.Component
     modules = [AuthenticationViewModelModule::class],
     dependencies = [AuthenticationComponentDependencies::class]
 )
-interface AuthenticationComponent {
+internal interface AuthenticationComponent {
 
     fun injectSignInPageFragment(signInPageFragment: SignInPageFragment)
 

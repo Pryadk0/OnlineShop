@@ -8,7 +8,7 @@ import dagger.Module
 import dagger.multibindings.IntoMap
 
 @Module
-interface Page1ViewModelModule {
+internal interface Page1ViewModelModule {
 
     @Binds
     @IntoMap

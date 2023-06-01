@@ -17,7 +17,7 @@ import javax.inject.Inject
 
 private const val ARG_IMAGE_URL = "imageUrl"
 
-class ProductImageFragment : Fragment(R.layout.fragment_product_image) {
+internal class ProductImageFragment : Fragment(R.layout.fragment_product_image) {
     private var _binding: FragmentProductImageBinding? = null
     private val binding: FragmentProductImageBinding
         get() = _binding ?: throw RuntimeException("${this.javaClass.simpleName}Binding == null")
