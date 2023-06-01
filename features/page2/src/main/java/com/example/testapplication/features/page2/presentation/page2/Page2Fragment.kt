@@ -173,7 +173,7 @@ internal class Page2Fragment : Fragment(R.layout.fragment_page2) {
                 R.layout.item_tab_product_detail_image, binding.tabLayoutProductImages,
                 false
             )
-            viewModel.downloadProductImageDrawable(productDetailInfo.imageUrls[position]) { downloadedBitmap ->
+            viewModel.downloadProductImage(productDetailInfo.imageUrls[position]) { downloadedBitmap ->
                 requireActivity().runOnUiThread {
                     customTab.imageViewTabItemProductDetail.setImageBitmap(downloadedBitmap)
                     tab.customView = customTab.root

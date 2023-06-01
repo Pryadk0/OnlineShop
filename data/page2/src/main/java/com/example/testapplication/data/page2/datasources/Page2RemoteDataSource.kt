@@ -7,6 +7,6 @@ interface Page2RemoteDataSource {
 
     fun getProductDetailInfo(callback: (ProductDetailInfoDataEntity) -> Unit)
 
-    fun downloadProductImageDrawable(imageUrl: String, callback: (Bitmap) -> Unit)
+    fun downloadProductImage(imageUrl: String, callback: (Bitmap?) -> Unit)
 
 }

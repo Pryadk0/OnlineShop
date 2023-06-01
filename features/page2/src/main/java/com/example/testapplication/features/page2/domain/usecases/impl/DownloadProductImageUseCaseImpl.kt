@@ -1,13 +1,13 @@
 package com.example.testapplication.features.page2.domain.usecases.impl
 
-import android.widget.ImageView
+import android.graphics.Bitmap
+import com.example.testapplication.features.page2.domain.Page2Repository
 import com.example.testapplication.features.page2.domain.usecases.DownloadProductImageUseCase
-import com.example.testapplication.features.page2.domain.ProductImageRepository
 import javax.inject.Inject
 
-internal class DownloadProductImageUseCaseImpl @Inject constructor(private val repository: ProductImageRepository) :
+internal class DownloadProductImageUseCaseImpl @Inject constructor(private val repository: Page2Repository) :
     DownloadProductImageUseCase {
 
-    override fun downloadProductImage(imageUrl: String, container: ImageView) =
-        repository.downloadProductImage(imageUrl, container)
+    override fun downloadProductImage(imageUrl: String, callback: (Bitmap?) -> Unit) =
+        repository.downloadProductImage(imageUrl, callback)
 }

@@ -9,10 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.features.page2.R
 import com.example.features.page2.databinding.FragmentProductImageBinding
+import com.example.testapplication.core.presentation.viewmodel.ViewModelFactory
 import com.example.testapplication.features.page2.di.component.Page2ComponentDependencies
 import com.example.testapplication.features.page2.di.component.Page2ComponentDependenciesProvider
 import com.example.testapplication.features.page2.di.component.ProductImageFragmentComponentViewModel
-import com.example.testapplication.core.presentation.viewmodel.ViewModelFactory
 import javax.inject.Inject
 
 private const val ARG_IMAGE_URL = "imageUrl"
@@ -56,7 +56,9 @@ internal class ProductImageFragment : Fragment(R.layout.fragment_product_image) 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         imageIrl?.let {
-            viewModel.downloadProductImage(it, binding.imageViewDetailProductImage)
+            viewModel.downloadProductImage(it) { productImage ->
+                requireActivity().runOnUiThread{binding.imageViewDetailProductImage.setImageBitmap(productImage)}
+            }
         }
     }
 

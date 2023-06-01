@@ -33,7 +33,7 @@ class Page2RemoteDataSourceImpl @Inject constructor(
         )
     }
 
-    override fun downloadProductImageDrawable(imageUrl: String, callback: (Bitmap) -> Unit) =
+    override fun downloadProductImage(imageUrl: String, callback: (Bitmap?) -> Unit) =
         Thread { callback(Picasso.get().load(imageUrl).get()) }.start()
 
     protected fun finalize() {

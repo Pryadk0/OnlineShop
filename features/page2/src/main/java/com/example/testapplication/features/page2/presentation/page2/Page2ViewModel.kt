@@ -7,13 +7,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.testapplication.features.page2.Page2Router
 import com.example.testapplication.features.page2.domain.entities.ProductDetailInfo
-import com.example.testapplication.features.page2.domain.usecases.DownloadProductImageDrawableUseCase
+import com.example.testapplication.features.page2.domain.usecases.DownloadProductImageUseCase
 import com.example.testapplication.features.page2.domain.usecases.GetProductDetailInfoUseCase
 import javax.inject.Inject
 
 internal class Page2ViewModel @Inject constructor(
     private val getProductDetailInfoUseCase: GetProductDetailInfoUseCase,
-    private val downloadProductImageDrawableUseCase: DownloadProductImageDrawableUseCase,
+    private val downloadProductImageUseCase: DownloadProductImageUseCase,
     private val page2Router: Page2Router
 ) : ViewModel() {
     private val _productDetailInfoLiveData: MutableLiveData<ProductDetailInfo> = MutableLiveData()
@@ -28,8 +28,8 @@ internal class Page2ViewModel @Inject constructor(
         _productDetailInfoLiveData.value = it
     }
 
-    fun downloadProductImageDrawable(imageUrl: String, callback: (Bitmap) -> Unit) =
-        downloadProductImageDrawableUseCase.downloadProductImageDrawable(imageUrl, callback)
+    fun downloadProductImage(imageUrl: String, callback: (Bitmap?) -> Unit) =
+        downloadProductImageUseCase.downloadProductImage(imageUrl, callback)
 
     fun startAuthorizedScreen(context: Context) {
         page2Router.startAuthorizedScreen(context)

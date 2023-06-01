@@ -1,6 +1,6 @@
 package com.example.testapplication.features.page2.presentation.productimage
 
-import android.widget.ImageView
+import android.graphics.Bitmap
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -15,7 +15,7 @@ internal class ProductImageViewModel @Inject constructor(
     val productDetailInfoLiveData: LiveData<ProductDetailInfo>
         get() = _productDetailInfoLiveData
 
-    fun downloadProductImage(imageUrl: String, container: ImageView) =
-        downloadProductImageUseCase.downloadProductImage(imageUrl, container)
+    fun downloadProductImage(imageUrl: String, callback: (Bitmap?) -> Unit) =
+        downloadProductImageUseCase.downloadProductImage(imageUrl, callback)
 
 }

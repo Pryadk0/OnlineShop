@@ -12,4 +12,5 @@ internal class Page2RouterImpl @Inject constructor(): Page2Router {
     override fun startAuthorizedScreen(context: Context) {
         startActivity(context, Intent(context, AuthorizedActivity::class.java), null)
     }
+
 }

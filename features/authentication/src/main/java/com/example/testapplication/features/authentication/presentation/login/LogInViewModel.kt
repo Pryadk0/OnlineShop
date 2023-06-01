@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import com.example.testapplication.features.authentication.LogInRouter
 import com.example.testapplication.features.authentication.domain.entities.User
 import com.example.testapplication.features.authentication.domain.usecases.GetUserFromDbUseCase
-import com.example.testapplication.features.authentication.domain.usecases.impl.GetUserFromDbUseCaseImpl
 import javax.inject.Inject
 
 internal class LogInViewModel @Inject constructor(

@@ -7,5 +7,5 @@ interface Page2DataRepository {
 
     fun getProductDetailInfo(callback: (ProductDetailInfoDataEntity) -> Unit)
 
-    fun downloadProductImageDrawable(imageUrl: String, callback: (Bitmap) -> Unit)
+    fun downloadProductImage(imageUrl: String, callback: (Bitmap?) -> Unit)
 }

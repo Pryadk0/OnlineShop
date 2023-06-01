@@ -1,9 +1,9 @@
 package com.example.testapplication.features.authentication.di.modules
 
 import androidx.lifecycle.ViewModel
+import com.example.testapplication.core.presentation.viewmodel.ViewModelKey
 import com.example.testapplication.features.authentication.presentation.login.LogInViewModel
 import com.example.testapplication.features.authentication.presentation.signin.SignInPageViewModel
-import com.example.testapplication.core.presentation.viewmodel.ViewModelKey
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

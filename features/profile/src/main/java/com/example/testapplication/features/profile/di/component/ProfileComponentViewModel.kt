@@ -1,7 +1,6 @@
 package com.example.testapplication.features.profile.di.component
 
 import androidx.lifecycle.ViewModel
-import java.lang.RuntimeException
 
 internal class ProfileComponentViewModel : ViewModel() {
 

@@ -1,7 +1,6 @@
 package com.example.testapplication.features.page2.di.component
 
 import androidx.lifecycle.ViewModel
-import java.lang.RuntimeException
 
 internal class ProductImageFragmentComponentViewModel: ViewModel() {
 
