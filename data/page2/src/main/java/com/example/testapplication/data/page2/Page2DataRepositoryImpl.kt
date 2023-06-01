@@ -13,7 +13,7 @@ class Page2DataRepositoryImpl @Inject constructor(
     override fun getProductDetailInfo(callback: (ProductDetailInfoDataEntity) -> Unit) =
         remoteDataSource.getProductDetailInfo(callback)
 
-    override fun downloadProductImageDrawable(imageUrl: String, callback: (Bitmap) -> Unit) =
-        remoteDataSource.downloadProductImageDrawable(imageUrl, callback)
+    override fun downloadProductImage(imageUrl: String, callback: (Bitmap?) -> Unit) =
+        remoteDataSource.downloadProductImage(imageUrl, callback)
 
 }

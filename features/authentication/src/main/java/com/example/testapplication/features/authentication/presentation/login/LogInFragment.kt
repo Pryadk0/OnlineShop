@@ -21,7 +21,7 @@ import com.example.testapplication.features.authentication.di.component.LogInCom
 import javax.inject.Inject
 
 
-class LogInFragment : Fragment(R.layout.fragment_log_in) {
+internal class LogInFragment : Fragment(R.layout.fragment_log_in) {
     private var _binding: FragmentLogInBinding? = null
     private val binding: FragmentLogInBinding
         get() = _binding ?: throw RuntimeException("${this.javaClass.simpleName}Binding == null")

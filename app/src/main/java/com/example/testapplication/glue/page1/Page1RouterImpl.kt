@@ -7,7 +7,7 @@ import com.example.testapplication.features.page1.Page1Router
 import com.example.testapplication.presentation.activities.DetailProductActivity
 import javax.inject.Inject
 
-class Page1RouterImpl @Inject constructor() : Page1Router {
+internal class Page1RouterImpl @Inject constructor() : Page1Router {
 
     override fun startFlashSaleProductDetailScreen(context: Context) {
         startActivity(context, Intent(context, DetailProductActivity::class.java), null)

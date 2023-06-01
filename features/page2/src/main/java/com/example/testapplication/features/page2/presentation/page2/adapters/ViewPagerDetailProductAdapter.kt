@@ -6,7 +6,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.testapplication.features.page2.domain.entities.ProductDetailInfo
 import com.example.testapplication.features.page2.presentation.productimage.ProductImageFragment
 
-class ViewPagerDetailProductAdapter(
+internal class ViewPagerDetailProductAdapter(
     fragmentActivity: FragmentActivity,
     private val productDetailInfo: ProductDetailInfo,
 ) : FragmentStateAdapter(fragmentActivity) {

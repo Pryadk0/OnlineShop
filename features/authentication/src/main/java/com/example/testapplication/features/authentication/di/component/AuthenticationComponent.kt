@@ -1,5 +1,6 @@
 package com.example.testapplication.features.authentication.di.component
 
+import com.example.testapplication.features.authentication.di.modules.AuthenticationUseCaseModule
 import com.example.testapplication.features.authentication.di.modules.AuthenticationViewModelModule
 import com.example.testapplication.features.authentication.di.scopes.AuthenticationFeatureScope
 import com.example.testapplication.features.authentication.presentation.login.LogInFragment
@@ -8,10 +9,10 @@ import dagger.Component
 
 @AuthenticationFeatureScope
 @Component(
-    modules = [AuthenticationViewModelModule::class],
+    modules = [AuthenticationViewModelModule::class, AuthenticationUseCaseModule::class],
     dependencies = [AuthenticationComponentDependencies::class]
 )
-interface AuthenticationComponent {
+internal interface AuthenticationComponent {
 
     fun injectSignInPageFragment(signInPageFragment: SignInPageFragment)
 

@@ -7,7 +7,7 @@ import com.example.testapplication.features.authentication.presentation.signin.S
 
 import javax.inject.Inject
 
-class SignInRouterImpl @Inject constructor() : SignInRouter {
+internal class SignInRouterImpl @Inject constructor() : SignInRouter {
 
     override fun startLogInScreen(fromFragment: Fragment) {
         fromFragment.findNavController()

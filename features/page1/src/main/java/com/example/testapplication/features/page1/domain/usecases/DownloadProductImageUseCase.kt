@@ -1,11 +1,9 @@
 package com.example.testapplication.features.page1.domain.usecases
 
 import android.widget.ImageView
-import com.example.testapplication.features.page1.domain.Page1Repository
-import javax.inject.Inject
 
-class DownloadProductImageUseCase @Inject constructor(private val repository: Page1Repository) {
+internal interface DownloadProductImageUseCase {
 
-    fun downloadProductImage(imageUrl: String, container: ImageView) =
-        repository.downloadProductImage(imageUrl, container)
+    fun downloadProductImage(imageUrl: String, container: ImageView)
+
 }

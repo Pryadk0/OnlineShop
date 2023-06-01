@@ -1,14 +1,14 @@
 package com.example.testapplication.features.page1.di.modules
 
 import androidx.lifecycle.ViewModel
-import com.example.testapplication.features.page1.presentation.Page1ViewModel
 import com.example.testapplication.core.presentation.viewmodel.ViewModelKey
+import com.example.testapplication.features.page1.presentation.Page1ViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 
 @Module
-interface Page1ViewModelModule {
+internal interface Page1ViewModelModule {
 
     @Binds
     @IntoMap

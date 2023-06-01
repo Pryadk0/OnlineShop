@@ -7,15 +7,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.graphics.BlendModeColorFilterCompat
 import androidx.core.graphics.BlendModeCompat
-import com.example.testapplication.core.presentation.setStatusBarDarkIcons
 import com.example.core.theme.R
+import com.example.testapplication.core.presentation.setStatusBarDarkIcons
 import com.example.testapplication.databinding.ActivityAuthorizatedBinding
 import com.example.testapplication.presentation.adapters.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import com.google.android.material.tabs.TabLayoutMediator
 
-class AuthorizedActivity : AppCompatActivity() {
+internal class AuthorizedActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAuthorizatedBinding
     private lateinit var viewPagerAdapter: ViewPagerAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
