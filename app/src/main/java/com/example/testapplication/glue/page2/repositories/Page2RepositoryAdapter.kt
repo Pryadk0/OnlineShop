@@ -7,7 +7,7 @@ import com.example.testapplication.features.page2.domain.Page2Repository
 import com.example.testapplication.glue.page2.mappers.Page2RepositoryAdapterMapper
 import javax.inject.Inject
 
-class Page2RepositoryAdapter @Inject constructor(
+internal class Page2RepositoryAdapter @Inject constructor(
     private val dataRepository: Page2DataRepository,
     private val mapper: Page2RepositoryAdapterMapper
 ) : Page2Repository {

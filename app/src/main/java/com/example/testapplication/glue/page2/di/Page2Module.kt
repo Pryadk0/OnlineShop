@@ -18,29 +18,23 @@ import dagger.Binds
 import dagger.Module
 
 @Module
-interface Page2Module {
-
+internal interface Page2Module {
 
     @Binds
     fun bindPage2Router(impl: Page2RouterImpl): Page2Router
 
-
     @Binds
     fun bindProductImageRepository(impl: ProductImageRepositoryAdapter): ProductImageRepository
 
-    //ProductImageDataBindings:
     @Binds
     fun bindProductImageDataRepository(impl: ProductImageDataRepositoryImpl): ProductImageDataRepository
 
     @Binds
     fun bindProductImageRemoteDataSource(impl: ProductImageRemoteDataSourceImpl): ProductImageRemoteDataSource
 
-    //Page2Bindings:
-
     @Binds
     fun bindPage2Repository(impl: Page2RepositoryAdapter): Page2Repository
 
-    //Page2DataBindings:
     @Binds
     fun bindPage2DataRepository(impl: Page2DataRepositoryImpl): Page2DataRepository
 

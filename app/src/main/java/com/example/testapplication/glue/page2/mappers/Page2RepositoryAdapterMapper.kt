@@ -4,7 +4,7 @@ import com.example.testapplication.features.page2.domain.entities.ProductDetailI
 import com.example.testapplication.data.page2.entities.ProductDetailInfoDataEntity
 import javax.inject.Inject
 
-class Page2RepositoryAdapterMapper @Inject constructor() {
+internal class Page2RepositoryAdapterMapper @Inject constructor() {
 
     fun mapProductDetailInfoDataEntityToProductDetailInfo(productDetailInfoDataEntity: ProductDetailInfoDataEntity): ProductDetailInfo =
         ProductDetailInfo(

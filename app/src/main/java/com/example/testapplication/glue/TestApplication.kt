@@ -12,7 +12,7 @@ import com.example.testapplication.features.profile.di.component.ProfileComponen
 import com.example.testapplication.di.components.ApplicationComponent
 import com.example.testapplication.di.components.DaggerApplicationComponent
 
-class TestApplication : Application(),
+internal class TestApplication : Application(),
     AuthenticationComponentDependenciesProvider,
     Page1ComponentDependenciesProvider,
     Page2ComponentDependenciesProvider,

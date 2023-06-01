@@ -7,7 +7,7 @@ import com.example.testapplication.features.page2.Page2Router
 import com.example.testapplication.presentation.activities.AuthorizedActivity
 import javax.inject.Inject
 
-class Page2RouterImpl @Inject constructor(): Page2Router {
+internal class Page2RouterImpl @Inject constructor(): Page2Router {
 
     override fun startAuthorizedScreen(context: Context) {
         startActivity(context, Intent(context, AuthorizedActivity::class.java), null)

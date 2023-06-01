@@ -14,25 +14,19 @@ import dagger.Binds
 import dagger.Module
 
 @Module
-interface AuthenticationModule {
-
+internal interface AuthenticationModule {
 
     @Binds
     fun bindLogInRouter(impl: LogInRouterImpl): LogInRouter
 
-
     @Binds
     fun bindSignInRouter(impl: SignInRouterImpl): SignInRouter
-
 
     @Binds
     fun bindAuthenticationRepository(impl: AuthenticationRepositoryAdapter): AuthenticationRepository
 
-    //AuthenticationDataBindings:
-
     @Binds
     fun bindAuthenticationDataRepository(impl: AuthenticationDataRepositoryImpl): AuthenticationDataRepository
-
 
     @Binds
     fun bindAuthenticationLocalDataSource(impl: AuthenticationLocalDataSourceImpl): AuthenticationLocalDataSource

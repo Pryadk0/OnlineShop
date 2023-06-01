@@ -15,7 +15,6 @@ dependencyResolutionManagement {
 rootProject.name = "TestApplication"
 include ':app'
 include ':core:theme'
-include ':core:common'
 include ':features:authentication'
 include ':features:profile'
 include ':features:page1'

@@ -6,7 +6,7 @@ import com.example.testapplication.data.authentication.AuthenticationDataReposit
 import com.example.testapplication.glue.authentication.mappers.AuthenticationRepositoryAdapterMapper
 import javax.inject.Inject
 
-class AuthenticationRepositoryAdapter @Inject constructor(
+internal class AuthenticationRepositoryAdapter @Inject constructor(
     private val dataRepository: AuthenticationDataRepository,
     private val mapper: AuthenticationRepositoryAdapterMapper
 ): AuthenticationRepository {

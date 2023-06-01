@@ -35,7 +35,7 @@ import javax.inject.Singleton
         ProfileModule::class
     ]
 )
-interface ApplicationComponent : AuthenticationComponentDependencies, Page1ComponentDependencies,
+internal interface ApplicationComponent : AuthenticationComponentDependencies, Page1ComponentDependencies,
     Page2ComponentDependencies, ProfileComponentDependencies {
 
     //AuthenticationComponentDependencies:

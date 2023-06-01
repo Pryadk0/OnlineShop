@@ -6,7 +6,7 @@ import com.example.testapplication.core.presentation.setStatusBarDarkIcons
 import com.example.core.theme.R
 import com.example.testapplication.databinding.ActivityDetailProductBinding
 
-class DetailProductActivity : AppCompatActivity() {
+internal class DetailProductActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailProductBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
