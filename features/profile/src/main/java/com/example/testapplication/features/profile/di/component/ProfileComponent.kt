@@ -10,7 +10,7 @@ import dagger.Component
     modules = [ProfileViewModelModule::class],
     dependencies = [ProfileComponentDependencies::class]
 )
-interface ProfileComponent {
+internal interface ProfileComponent {
 
     fun injectProfileFragment(profileFragment: ProfileFragment)
 

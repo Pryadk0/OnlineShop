@@ -33,7 +33,7 @@ class ProfileFragment : Fragment() {
         }
 
     @Inject
-    lateinit var viewModelFactory: ViewModelFactory
+    internal lateinit var viewModelFactory: ViewModelFactory
     private lateinit var viewModel: ProfileViewModel
 
     override fun onAttach(context: Context) {

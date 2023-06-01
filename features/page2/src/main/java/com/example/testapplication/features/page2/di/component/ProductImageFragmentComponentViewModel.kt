@@ -1,9 +1,8 @@
 package com.example.testapplication.features.page2.di.component
 
 import androidx.lifecycle.ViewModel
-import java.lang.RuntimeException
 
-class ProductImageFragmentComponentViewModel: ViewModel() {
+internal class ProductImageFragmentComponentViewModel: ViewModel() {
 
     private var component: Page2Component? = null
 

@@ -9,10 +9,9 @@ import com.example.testapplication.features.page1.domain.entities.FlashSaleProdu
 import com.example.testapplication.features.page1.domain.entities.LatestProduct
 import com.example.testapplication.features.page1.domain.usecases.GetAllProductsUseCase
 import com.example.testapplication.features.page1.domain.usecases.GetSearchWordsUseCase
-
 import javax.inject.Inject
 
-class Page1ViewModel @Inject constructor(
+internal class Page1ViewModel @Inject constructor(
     private val getAllProductsUseCase: GetAllProductsUseCase,
     private val getSearchWordsUseCase: GetSearchWordsUseCase,
     private val page1Router: Page1Router

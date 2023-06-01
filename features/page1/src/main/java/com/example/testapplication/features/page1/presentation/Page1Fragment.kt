@@ -33,13 +33,13 @@ class Page1Fragment : Fragment(R.layout.fragment_page1) {
     private lateinit var viewModel: Page1ViewModel
 
     @Inject
-    lateinit var viewModelFactory: ViewModelFactory
+    internal lateinit var viewModelFactory: ViewModelFactory
 
     @Inject
-    lateinit var flashSaleProductAdapter: FlashSaleProductsAdapter
+    internal lateinit var flashSaleProductAdapter: FlashSaleProductsAdapter
 
     @Inject
-    lateinit var latestProductAdapter: LatestProductsAdapter
+    internal lateinit var latestProductAdapter: LatestProductsAdapter
 
     override fun onAttach(context: Context) {
         val componentDependencies: Page1ComponentDependencies =

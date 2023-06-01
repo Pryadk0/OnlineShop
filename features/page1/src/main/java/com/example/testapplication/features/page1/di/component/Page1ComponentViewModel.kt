@@ -2,7 +2,7 @@ package com.example.testapplication.features.page1.di.component
 
 import androidx.lifecycle.ViewModel
 
-class Page1ComponentViewModel : ViewModel() {
+internal class Page1ComponentViewModel : ViewModel() {
 
     private var page1Component: Page1Component? = null
 

@@ -4,7 +4,6 @@ import android.text.TextUtils
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
-import com.google.android.material.textfield.TextInputEditText
 
 /**
 Making textViewError 'gone' and returns 'true' when editText.text isn't empty.

@@ -6,7 +6,7 @@ import dagger.Binds
 import dagger.Module
 
 @Module
-interface ProfileModule {
+internal interface ProfileModule {
 
     @Binds
     fun bindProfileRouter(impl: ProfileRouterImpl): ProfileRouter

@@ -6,7 +6,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.testapplication.features.page1.presentation.Page1Fragment
 import com.example.testapplication.features.profile.presentation.ProfileFragment
 
-class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
+internal class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
     FragmentStateAdapter(fragmentActivity) {
     override fun getItemCount(): Int = 5
 

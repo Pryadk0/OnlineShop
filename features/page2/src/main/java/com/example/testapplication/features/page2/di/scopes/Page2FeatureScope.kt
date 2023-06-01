@@ -4,4 +4,4 @@ import javax.inject.Scope
 
 @Scope
 @Retention(AnnotationRetention.RUNTIME)
-annotation class Page2FeatureScope
+internal annotation class Page2FeatureScope
