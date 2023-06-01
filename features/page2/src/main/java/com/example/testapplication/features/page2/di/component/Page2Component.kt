@@ -1,5 +1,6 @@
 package com.example.testapplication.features.page2.di.component
 
+import com.example.testapplication.features.page2.di.modules.Page2UseCaseModule
 import com.example.testapplication.features.page2.di.modules.Page2ViewModelModule
 import com.example.testapplication.features.page2.di.scopes.Page2FeatureScope
 import com.example.testapplication.features.page2.presentation.page2.Page2Fragment
@@ -8,7 +9,7 @@ import dagger.Component
 
 @Page2FeatureScope
 @Component(
-    modules = [Page2ViewModelModule::class],
+    modules = [Page2ViewModelModule::class, Page2UseCaseModule::class],
     dependencies = [Page2ComponentDependencies::class]
 )
 internal interface Page2Component {

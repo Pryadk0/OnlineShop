@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.features.page1.databinding.ItemFlashSaleProductBinding
 import com.example.testapplication.features.page1.domain.entities.FlashSaleProduct
 import com.example.testapplication.features.page1.domain.usecases.DownloadProductImageUseCase
+import com.example.testapplication.features.page1.domain.usecases.impl.DownloadProductImageUseCaseImpl
 import javax.inject.Inject
 
 internal class FlashSaleProductsAdapter @Inject constructor(
